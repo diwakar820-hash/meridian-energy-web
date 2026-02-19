@@ -30,7 +30,7 @@ export default function Home() {
       {/* Key Metrics Section */}
       <section className="bg-slate-50 border-t border-slate-100 py-20 px-8 md:px-24 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
-          <div className="text-4xl font-serif font-medium text-blue-900 mb-2">25-50 MW</div>
+          <div className="text-4xl font-serif font-medium text-blue-900 mb-2">50 MW</div>
           <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Active Capacity</div>
         </div>
         <div>

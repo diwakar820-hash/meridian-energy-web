@@ -16,12 +16,18 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-sans text-slate-900 bg-white min-h-screen flex flex-col">
         
-        {/* Global Navigation */}
+        {/* Global Navigation - RESTORED LOGO */}
         <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-8 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold tracking-tighter text-blue-900">
-            MERIDIAN ENERGY
+          <Link href="/">
+            <Image 
+              src="/logo.png" 
+              alt="Meridian Energy Logo" 
+              width={200} 
+              height={50} 
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </Link>
-          {/* Note: If you added your logo in the previous step, keep your <Image> tag here instead of the text above! */}
 
           <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
             <Link href="/portfolio" className="hover:text-blue-900 transition">Our Portfolio</Link>

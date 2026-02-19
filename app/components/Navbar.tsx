@@ -8,13 +8,15 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-8 py-4">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
+    <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+      
+      {/* Removed the 'max-w' shrink box, restored to full width with padding! */}
+      <div className="w-full px-8 md:px-12 py-4 flex justify-between items-center">
         
-        {/* Restored Logo */}
+        {/* Logo */}
         <Link href="/" onClick={() => setIsOpen(false)}>
           <Image 
-            src="/logo.svg" 
+            src="/logo.png" 
             alt="Meridian Energy Logo" 
             width={200} 
             height={50} 

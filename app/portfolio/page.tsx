@@ -1,3 +1,5 @@
+import Image from 'next/image'; // Importing the Next.js optimized image tool
+
 export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900 font-sans pt-32 px-8 md:px-24 pb-20">
@@ -30,10 +32,18 @@ export default function PortfolioPage() {
             </div>
           </div>
           
-          {/* Asset Image Placeholder */}
-          <div className="h-64 lg:h-full min-h-[400px] bg-slate-800 relative overflow-hidden flex items-center justify-center text-slate-400">
-             <div className="absolute inset-0 opacity-50 bg-gradient-to-br from-blue-900 to-slate-900"></div>
-             <span className="relative z-10 text-sm tracking-widest uppercase">[High-Res Project Render Goes Here]</span>
+          {/* Asset Image Section */}
+          <div className="h-64 lg:h-full min-h-[400px] relative overflow-hidden flex items-center justify-center">
+             {/* The Optimized Next.js Image */}
+             <Image 
+               src="/facility.jpg" 
+               alt="50 MW Hybrid Renewable Energy Facility in Maharashtra" 
+               fill
+               className="object-cover"
+               priority
+             />
+             {/* A subtle color overlay to make it look premium */}
+             <div className="absolute inset-0 opacity-20 bg-blue-900 mix-blend-multiply pointer-events-none"></div>
           </div>
 
         </div>

@@ -1,38 +1,45 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900 font-sans">
       
-      {/* Hero Section with Video Background */}
-      <section className="relative h-screen flex flex-col justify-center px-8 md:px-24 pt-20 overflow-hidden">
-        
-        {/* The Auto-Playing Background Video */}
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="absolute inset-0 w-full h-full object-cover z-0"
+      {/* HERO SECTION */}
+      <section className="relative h-screen flex items-center px-8 md:px-24 overflow-hidden">
+
+        {/* Background Video */}
+        <video
+          key="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0 scale-105 animate-[slowZoom_20s_linear_infinite]"
+          style={{ filter: 'brightness(0.85)' }}
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        
-        {/* Dark Overlay to make the text pop */}
-        <div className="absolute inset-0 bg-slate-900/60 z-0 pointer-events-none"></div>
 
-        {/* Text Content (Changed to white for contrast against the video) */}
-        <div className="max-w-4xl z-10 relative">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-slate-900/65 z-10"></div>
+
+        {/* Content */}
+        <div className="relative z-20 max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-serif font-medium text-white leading-tight mb-6">
             Powering the future through strategic renewable assets.
           </h1>
+
           <p className="text-lg md:text-xl text-slate-200 max-w-2xl mb-10 leading-relaxed">
-            Developing high-yield, utility-scale infrastructure. 
-            Currently advancing a flagship 50 MW hybrid renewable energy project to accelerate the energy transition in Maharashtra.
+            Developing high-yield, utility-scale infrastructure.
+            Currently advancing a flagship 50 MW hybrid renewable energy project
+            to accelerate the energy transition in Maharashtra.
           </p>
-          
-          {/* Changed button to white so it stands out on the dark video */}
-          <Link href="/portfolio" className="inline-block bg-white text-blue-900 px-8 py-4 text-sm font-bold tracking-widest hover:bg-slate-100 transition shadow-xl">
+
+          <Link
+            href="/portfolio"
+            className="inline-block bg-white text-blue-900 px-8 py-4 text-sm font-bold tracking-widest hover:bg-slate-100 transition duration-300 shadow-xl"
+          >
             EXPLORE OUR ASSETS
           </Link>
         </div>

@@ -20,7 +20,7 @@ export default function RootLayout({
         <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-8 py-4 flex justify-between items-center">
           <Link href="/">
             <Image 
-              src="/logo.png" 
+              src="/logo.svg" 
               alt="Meridian Energy Logo" 
               width={200} 
               height={50} 

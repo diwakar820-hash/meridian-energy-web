@@ -23,7 +23,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Direct Inquiries</h3>
                 <p>Email: info@meridianenergy.in</p>
-                <p>Phone: +91 (90106 33445)</p>
+                <p>Phone: +91 90106 33445</p>
               </div>
               
               <div>

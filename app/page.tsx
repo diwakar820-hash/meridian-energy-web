@@ -2,15 +2,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900 font-sans">
       {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-8 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold tracking-tighter text-blue-900">MERIDIAN ENERGY</div>
-        <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-          <a href="#" className="hover:text-blue-900 transition">Our Portfolio</a>
-          <a href="#" className="hover:text-blue-900 transition">Sustainability</a>
-          <a href="#" className="hover:text-blue-900 transition">Strategic Capital</a>
-        </div>
-      </nav>
-
+      
       {/* Hero Section */}
       <section className="relative h-screen flex flex-col justify-center px-8 md:px-24 pt-20">
         <div className="max-w-4xl z-10">

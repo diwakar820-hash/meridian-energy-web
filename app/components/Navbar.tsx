@@ -10,13 +10,12 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
       
-      {/* Removed the 'max-w' shrink box, restored to full width with padding! */}
       <div className="w-full px-8 md:px-12 py-4 flex justify-between items-center">
         
         {/* Logo */}
         <Link href="/" onClick={() => setIsOpen(false)}>
           <Image 
-            src="/logo.svg" 
+            src="/logo.png" 
             alt="Meridian Energy Logo" 
             width={200} 
             height={50} 
@@ -25,10 +24,11 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu - ADDED CONTACT LINK */}
         <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
           <Link href="/portfolio" className="hover:text-blue-900 transition">Our Portfolio</Link>
           <Link href="/about" className="hover:text-blue-900 transition">Strategic Capital</Link>
+          <Link href="/contact" className="hover:text-blue-900 transition">Contact</Link>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -42,11 +42,12 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Dropdown - ADDED CONTACT LINK */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-lg py-6 px-8 flex flex-col space-y-6 text-sm font-medium text-slate-600">
           <Link href="/portfolio" onClick={() => setIsOpen(false)} className="hover:text-blue-900 transition block">Our Portfolio</Link>
           <Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-blue-900 transition block">Strategic Capital</Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-blue-900 transition block">Contact</Link>
         </div>
       )}
     </nav>

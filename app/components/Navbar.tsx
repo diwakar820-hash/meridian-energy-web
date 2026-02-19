@@ -16,7 +16,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" onClick={() => setIsOpen(false)}>
           <Image 
-            src="/logo.png" 
+            src="/logo.svg" 
             alt="Meridian Energy Logo" 
             width={200} 
             height={50} 

@@ -15,7 +15,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" onClick={() => setIsOpen(false)}>
           <Image 
-            src="/logo.png" 
+            src="/logo.svg" 
             alt="Meridian Energy Logo" 
             width={200} 
             height={50} 
@@ -28,7 +28,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
           <Link href="/portfolio" className="hover:text-blue-900 transition">Our Portfolio</Link>
           <Link href="/about" className="hover:text-blue-900 transition">Strategic Capital</Link>
-          <Link href="/contact" className="hover:text-blue-900 transition">Contact</Link>
+          <Link href="/contact" className="hover:text-blue-900 transition">Contact Us</Link>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -47,7 +47,7 @@ export default function Navbar() {
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-lg py-6 px-8 flex flex-col space-y-6 text-sm font-medium text-slate-600">
           <Link href="/portfolio" onClick={() => setIsOpen(false)} className="hover:text-blue-900 transition block">Our Portfolio</Link>
           <Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-blue-900 transition block">Strategic Capital</Link>
-          <Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-blue-900 transition block">Contact</Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-blue-900 transition block">Contact Us</Link>
         </div>
       )}
     </nav>

@@ -22,8 +22,8 @@ export default function ContactPage() {
               
               <div>
                 <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Direct Inquiries</h3>
-                <p>Email: contact@meridianenergy.in</p>
-                <p>Phone: +91 (Insert Phone Number)</p>
+                <p>Email: info@meridianenergy.in</p>
+                <p>Phone: +91 (90106 33445)</p>
               </div>
               
               <div>
@@ -37,24 +37,26 @@ export default function ContactPage() {
           {/* Right Column: Inquiry Form */}
           <div className="bg-slate-50 p-8 md:p-10 border border-slate-100 shadow-sm">
             <h2 className="text-xl font-serif text-slate-900 mb-6">Send an Inquiry</h2>
-            <form className="space-y-6">
+            
+            {/* Make sure your Formspree link stays here! */}
+            <form action="YOUR_FORMSPREE_LINK_HERE" method="POST" className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
-                <input type="text" id="name" className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="John Doe" />
+                <input type="text" id="name" name="name" required className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="John Doe" />
               </div>
               <div>
                 <label htmlFor="organization" className="block text-sm font-medium text-slate-700 mb-1">Organization</label>
-                <input type="text" id="organization" className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="Company Name" />
+                <input type="text" id="organization" name="organization" className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="Company Name" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-                <input type="email" id="email" className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="john@company.com" />
+                <input type="email" id="email" name="email" required className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="john@company.com" />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">Message</label>
-                <textarea id="message" rows={4} className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="How can we help you?"></textarea>
+                <textarea id="message" name="message" required rows={4} className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="How can we help you?"></textarea>
               </div>
-              <button type="button" className="w-full bg-blue-900 text-white px-8 py-4 text-sm font-semibold tracking-wide hover:bg-blue-800 transition shadow-md">
+              <button type="submit" className="w-full bg-blue-900 text-white px-8 py-4 text-sm font-semibold tracking-wide hover:bg-blue-800 transition shadow-md">
                 SUBMIT INQUIRY
               </button>
             </form>

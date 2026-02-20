@@ -61,14 +61,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Corporate Credibility Section */}
-      <section className="py-32 px-8 md:px-24 bg-slate-900 text-center relative z-10">
+      {/* REVISED: Focused Corporate Strategy Section */}
+      <section className="py-32 px-8 md:px-24 bg-slate-900 text-center relative z-10 border-t border-slate-800">
         <div className="max-w-4xl mx-auto">
-           <h2 className="text-3xl font-serif font-medium text-white mb-6">Backed by Meridian Group</h2>
+           <h2 className="text-3xl font-serif font-medium text-white mb-6">Strategic Capital. Sustainable Power.</h2>
            <p className="text-slate-400 text-lg leading-relaxed mb-10">
-             As the dedicated renewable energy vertical of Meridian Group, we bring rigorous financial oversight and deep regional expertise to India's energy transition. Our focus is exclusively on high-performance assets that deliver enduring value to the grid and our partners.
+             Meridian Energy is a dedicated renewable infrastructure developer. We bring rigorous financial oversight and deep regional expertise to India's energy transition. Our core mandate is the origination and execution of high-performance utility-scale assets that deliver enduring value to the grid and our partners.
            </p>
-           <Link href="/about" className="text-white font-bold text-sm tracking-widest uppercase hover:text-blue-400 transition">
+           <Link href="/about" className="text-white font-bold text-sm tracking-widest uppercase hover:text-blue-400 transition border-b border-transparent hover:border-blue-400 pb-1">
              Read Our Strategy &rarr;
            </Link>
         </div>

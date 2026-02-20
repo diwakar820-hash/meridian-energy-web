@@ -2,8 +2,16 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'; 
+import localFont from 'next/font/local';
 
-// UPGRADED SEO: Now explicitly mentions the 10 GW expansion roadmap
+// LOAD YOUR CUSTOM OTF FONT
+const meridianFont = localFont({
+  src: './fonts/meridian-font.otf',
+  variable: '--font-meridian',
+  display: 'swap',
+});
+
+// Premium SEO Metadata
 export const metadata: Metadata = {
   title: 'Meridian Energy | Institutional Renewable Infrastructure',
   description: 'Developing high-yield, utility-scale renewable assets. Executing a 50 MW pilot to anchor a 500 MW pipeline by 2029 and a 10 GW vision by 2035.',
@@ -27,7 +35,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans text-slate-900 bg-white min-h-screen flex flex-col">
+      {/* INJECTED THE FONT VARIABLE INTO THE BODY TAG */}
+      <body className={`font-sans text-slate-900 bg-white min-h-screen flex flex-col ${meridianFont.variable}`}>
         <Navbar />
         <div className="flex-grow">
           {children}

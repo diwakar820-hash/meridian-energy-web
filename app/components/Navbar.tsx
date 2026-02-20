@@ -42,7 +42,7 @@ export default function Navbar() {
             
             {/* Institutional 'Portal' Link */}
             <div className="pl-6 border-l border-slate-300">
-              <Link href="/contact" className="text-xs font-bold text-blue-900 uppercase tracking-widest hover:text-slate-500 transition flex items-center gap-2">
+              <Link href="/portal" className="text-xs font-bold text-blue-900 uppercase tracking-widest hover:text-slate-500 transition flex items-center gap-2">
                 Investor Portal 
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </Link>
@@ -78,11 +78,11 @@ export default function Navbar() {
             <Link href="/portfolio" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-blue-900 py-2">
               Our Portfolio
             </Link>
-            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-blue-900 py-2">
+            <Link href="/portal" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-blue-900 py-2">
               Contact Us
             </Link>
             <div className="pt-4 mt-2 border-t border-slate-100">
-              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm font-bold text-blue-900 uppercase tracking-widest py-2">
+              <Link href="/portal" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm font-bold text-blue-900 uppercase tracking-widest py-2">
                 Investor Portal &rarr;
               </Link>
             </div>

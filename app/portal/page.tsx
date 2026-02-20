@@ -5,7 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function InvestorPortalPage() {
+  // 1. State for the scroll-spy navigation
   const [activeSection, setActiveSection] = useState("updates");
+  
+  // 2. NEW: State to manage which Resource accordion is currently open
+  const [openResource, setOpenResource] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,7 +19,6 @@ export default function InvestorPortalPage() {
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
-          // Increased the threshold slightly to account for the smooth scrolling offsets
           const rect = element.getBoundingClientRect();
           if (rect.top <= 180) {
             current = section;
@@ -37,16 +40,20 @@ export default function InvestorPortalPage() {
     }`;
   };
 
+  // NEW: Helper function to toggle the resource dropdowns
+  const toggleResource = (resource: string) => {
+    setOpenResource(openResource === resource ? null : resource);
+  };
+
   return (
-    // ADDED: scroll-smooth for a premium gliding effect
     <main className="min-h-screen bg-white text-slate-900 font-sans pt-24 scroll-smooth">
       
       {/* Sticky Sub-Navigation Bar */}
       <div className="sticky top-24 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 overflow-x-auto shadow-sm">
         <div className="max-w-[1200px] mx-auto px-8 flex space-x-8 text-sm font-semibold whitespace-nowrap">
           <Link href="#updates" className={getLinkClass("updates")}>Updates</Link>
-          <Link href="#performance" className={getLinkClass("performance")}>Asset performance</Link>
           <Link href="#registry" className={getLinkClass("registry")}>Manage your investment</Link>
+          <Link href="#performance" className={getLinkClass("performance")}>Asset performance</Link>
           <Link href="#calendar" className={getLinkClass("calendar")}>Financial calendar</Link>
           <Link href="#videos" className={getLinkClass("videos")}>Latest videos</Link>
           <Link href="#resources" className={getLinkClass("resources")}>Resources</Link>
@@ -56,7 +63,6 @@ export default function InvestorPortalPage() {
       <div className="max-w-[1200px] mx-auto px-8 py-16 space-y-24">
 
         {/* SECTION: 2026 Operational Briefing */}
-        {/* ADDED: scroll-mt-48 to act as an invisible bumper */}
         <section id="updates" className="scroll-mt-48 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-8">
           <div>
             <h1 className="text-4xl font-light text-slate-900 mb-6">2026 Operational Briefing</h1>
@@ -78,7 +84,6 @@ export default function InvestorPortalPage() {
         </section>
 
         {/* SECTION: Asset Performance */}
-        {/* ADDED: scroll-mt-48 */}
         <section id="performance" className="scroll-mt-48 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-16 border-t border-slate-100">
           <div className="space-y-4">
             <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
@@ -115,7 +120,6 @@ export default function InvestorPortalPage() {
         </section>
 
         {/* SECTION: Manage Your Shares / Partner Registry */}
-        {/* ADDED: scroll-mt-48 */}
         <section id="registry" className="scroll-mt-48 grid grid-cols-1 lg:grid-cols-3 gap-16 pt-16 border-t border-slate-100">
           <div className="lg:col-span-2 space-y-6">
             <h2 className="text-3xl font-light text-slate-900 mb-6">Manage your investment</h2>
@@ -140,7 +144,6 @@ export default function InvestorPortalPage() {
         </section>
 
         {/* SECTION: Financial Calendar */}
-        {/* ADDED: scroll-mt-48 */}
         <section id="calendar" className="scroll-mt-48 pt-16 border-t border-slate-100 grid grid-cols-1 lg:grid-cols-3 gap-16">
           <div className="lg:col-span-1">
             <h2 className="text-3xl font-light text-slate-900">Financial calendar</h2>
@@ -166,7 +169,6 @@ export default function InvestorPortalPage() {
         </section>
 
         {/* SECTION: Latest Videos */}
-        {/* ADDED: scroll-mt-48 */}
         <section id="videos" className="scroll-mt-48 pt-16 border-t border-slate-100">
           <h2 className="text-3xl font-light text-slate-900 mb-10">Latest videos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -200,29 +202,106 @@ export default function InvestorPortalPage() {
 
       </div>
 
-      {/* SECTION: Dark Resources Footer */}
-      {/* ADDED: scroll-mt-48 */}
+      {/* SECTION: Dark Resources Footer (UPGRADED WITH FUNCTIONAL ACCORDIONS) */}
       <section id="resources" className="scroll-mt-48 bg-black text-white pt-24 pb-16 px-8">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="text-3xl font-light mb-12">Resources</h2>
           
           <div className="space-y-0 border-t border-slate-800">
-            <Link href="#" className="flex justify-between items-center py-6 border-b border-slate-800 hover:bg-white/5 transition px-4 group">
-              <span className="text-xl font-light">Investor contacts</span>
-              <span className="text-2xl group-hover:translate-x-2 transition-transform">&rarr;</span>
-            </Link>
-            <Link href="#" className="flex justify-between items-center py-6 border-b border-slate-800 hover:bg-white/5 transition px-4 group">
-              <span className="text-xl font-light">Regulatory disclosures</span>
-              <span className="text-2xl group-hover:translate-x-2 transition-transform">&rarr;</span>
-            </Link>
-            <Link href="#" className="flex justify-between items-center py-6 border-b border-slate-800 hover:bg-white/5 transition px-4 group">
-              <span className="text-xl font-light">Capital instruments</span>
-              <span className="text-2xl group-hover:translate-x-2 transition-transform">&rarr;</span>
-            </Link>
-            <Link href="#" className="flex justify-between items-center py-6 border-b border-slate-800 hover:bg-white/5 transition px-4 group">
-              <span className="text-xl font-light">Fund filings</span>
-              <span className="text-2xl group-hover:translate-x-2 transition-transform">&rarr;</span>
-            </Link>
+            
+            {/* 1. Investor Contacts */}
+            <div className="border-b border-slate-800">
+              <button 
+                onClick={() => toggleResource('contacts')}
+                className="w-full flex justify-between items-center py-6 hover:bg-white/5 transition px-4 group outline-none"
+              >
+                <span className="text-xl font-light">Investor contacts</span>
+                <span className={`text-2xl transition-transform duration-300 ${openResource === 'contacts' ? 'rotate-90 text-[#00A88F]' : 'group-hover:translate-x-2'}`}>
+                  &rarr;
+                </span>
+              </button>
+              {openResource === 'contacts' && (
+                <div className="px-4 pb-8 pt-2 text-slate-400 text-sm space-y-6 animate-fade-in">
+                  <div>
+                    <strong className="text-white block mb-1">Global Investor Relations</strong>
+                    <p>ir@meridianenergy.in | +91 20 8765 4321</p>
+                  </div>
+                  <div>
+                    <strong className="text-white block mb-1">Partner Registry Services</strong>
+                    <p>registry@meridianenergy.in | +91 20 1234 5678</p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* 2. Regulatory Disclosures */}
+            <div className="border-b border-slate-800">
+              <button 
+                onClick={() => toggleResource('regulatory')}
+                className="w-full flex justify-between items-center py-6 hover:bg-white/5 transition px-4 group outline-none"
+              >
+                <span className="text-xl font-light">Regulatory disclosures</span>
+                <span className={`text-2xl transition-transform duration-300 ${openResource === 'regulatory' ? 'rotate-90 text-[#00A88F]' : 'group-hover:translate-x-2'}`}>
+                  &rarr;
+                </span>
+              </button>
+              {openResource === 'regulatory' && (
+                <div className="px-4 pb-8 pt-2 text-slate-400 text-sm space-y-4 animate-fade-in">
+                  <p className="mb-4 text-slate-300">Access our latest statutory filings and compliance frameworks.</p>
+                  <Link href="#" className="block hover:text-white transition">↓ SEBI Compliance Certificate (Q4 2025) <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 2.1 MB</span></Link>
+                  <Link href="#" className="block hover:text-white transition">↓ Environmental & Social Governance (ESG) Framework <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 5.4 MB</span></Link>
+                  <Link href="#" className="block hover:text-white transition">↓ Grid Connection Approval - Maharashtra MSETCL <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 1.2 MB</span></Link>
+                </div>
+              )}
+            </div>
+
+            {/* 3. Capital Instruments */}
+            <div className="border-b border-slate-800">
+              <button 
+                onClick={() => toggleResource('capital')}
+                className="w-full flex justify-between items-center py-6 hover:bg-white/5 transition px-4 group outline-none"
+              >
+                <span className="text-xl font-light">Capital instruments</span>
+                <span className={`text-2xl transition-transform duration-300 ${openResource === 'capital' ? 'rotate-90 text-[#00A88F]' : 'group-hover:translate-x-2'}`}>
+                  &rarr;
+                </span>
+              </button>
+              {openResource === 'capital' && (
+                <div className="px-4 pb-8 pt-2 text-slate-400 text-sm space-y-4 animate-fade-in">
+                  <p className="mb-4 text-slate-300">Overview of active debt and equity structures funding our pipeline.</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="p-4 bg-white/5 border border-slate-800">
+                      <strong className="text-white block">Senior Secured Green Bonds</strong>
+                      <p className="mt-1">Maturity: 2029 | Yield Target: 7.2%</p>
+                    </div>
+                    <div className="p-4 bg-white/5 border border-slate-800">
+                      <strong className="text-white block">Series A Preferred Equity</strong>
+                      <p className="mt-1">Private Placement - Group Captive Partners</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* 4. Fund Filings */}
+            <div className="border-b border-slate-800">
+              <button 
+                onClick={() => toggleResource('filings')}
+                className="w-full flex justify-between items-center py-6 hover:bg-white/5 transition px-4 group outline-none"
+              >
+                <span className="text-xl font-light">Fund filings</span>
+                <span className={`text-2xl transition-transform duration-300 ${openResource === 'filings' ? 'rotate-90 text-[#00A88F]' : 'group-hover:translate-x-2'}`}>
+                  &rarr;
+                </span>
+              </button>
+              {openResource === 'filings' && (
+                <div className="px-4 pb-8 pt-2 text-slate-400 text-sm space-y-4 animate-fade-in">
+                  <Link href="#" className="block hover:text-white transition">↓ Articles of Association (Amended Jan 2026) <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 8.1 MB</span></Link>
+                  <Link href="#" className="block hover:text-white transition">↓ FY25 Annual Financial Statements <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 4.4 MB</span></Link>
+                </div>
+              )}
+            </div>
+
           </div>
 
           <div className="mt-20 text-xs text-slate-500 leading-relaxed max-w-4xl grid grid-cols-1 md:grid-cols-4 gap-8">

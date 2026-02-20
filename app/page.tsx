@@ -21,8 +21,8 @@ export default function Home() {
           <source src="/hero.mp4" type="video/mp4" />
         </video>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-slate-900/65 z-10"></div>
+        {/* Overlay - THE FIX: Added pointer-events-none to let clicks pass through */}
+        <div className="absolute inset-0 bg-slate-900/65 z-10 pointer-events-none"></div>
 
         {/* Content */}
         <div className="relative z-20 max-w-4xl">
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REVISED: Focused Corporate Strategy Section */}
+      {/* Corporate Strategy Section */}
       <section className="py-32 px-8 md:px-24 bg-slate-900 text-center relative z-10 border-t border-slate-800">
         <div className="max-w-4xl mx-auto">
            <h2 className="text-3xl font-serif font-medium text-white mb-6">Strategic Capital. Sustainable Power.</h2>

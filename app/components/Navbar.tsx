@@ -20,9 +20,9 @@ export default function Navbar() {
                   meridian
                 </span>
                 {/* Navy Blue Divider (Slightly faded so it doesn't overpower the text) */}
-                <span className="text-2xl md:text-3xl font-light text-[#1A2B45]/40 mx-2 md:mx-3 pb-1">|</span>
+                <span className="font-meridian text-2xl md:text-2xl text-[#1A2B45]/40 mx-2 md:mx-3 pb-1">|</span>
                 {/* Solid Navy Blue 'Renewables' */}
-                <span className="text-2xl md:text-3xl font-medium text-[#1A2B45] tracking-wide group-hover:opacity-80 transition-opacity">
+                <span className="font-meridian text-2xl md:text-2xl text-[#1A2B45] tracking-wide group-hover:opacity-80 transition-opacity">
                   Renewables
                 </span>
               </div>

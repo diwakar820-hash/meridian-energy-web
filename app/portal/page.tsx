@@ -63,7 +63,7 @@ export default function InvestorPortalPage() {
           <div>
             <h1 className="text-4xl font-light text-slate-900 mb-6">2026 Capital Deployment</h1>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              Meridian Energy has initiated capital deployment for its foundational 25-50 MW Firm Dispatchable Renewable Energy (FDRE) hybrid asset. Anchored near high-voltage MSETCL infrastructure in Maharashtra, this facility executes a diversified revenue strategy across Direct Captive, Group Captive (GC), Merchant, and Open Access (OA) frameworks for tier-one industrial off-takers.
+              Meridian Energy has initiated capital deployment for its foundational 50 MW Firm Dispatchable Renewable Energy (FDRE) hybrid asset. Anchored near high-voltage MSETCL infrastructure in Maharashtra, this facility executes a diversified revenue strategy across Direct Captive, Group Captive (GC), Merchant, and Open Access (OA) frameworks for tier-one industrial off-takers.
             </p>
             <button className="bg-[#1A2B45] hover:bg-[#005F88] text-white px-8 py-3 text-sm font-medium transition shadow-sm">
               Explore FDRE metrics

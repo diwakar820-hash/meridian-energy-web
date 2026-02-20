@@ -5,7 +5,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white text-slate-900 font-sans pt-32 px-8 md:px-24 pb-20">
       <div className="max-w-5xl mx-auto">
         
-        <h1 className="text-4xl md:text-5xl font-serif font-medium text-blue-900 mb-8 pb-6 border-b border-slate-100">
+        <h1 className="font-meridian text-4xl md:text-5xl bg-gradient-to-r from-[#8CD600] via-[#00A88F] to-[#005F88] bg-clip-text text-transparent mb-6 leading-tight">
           Strategic Capital. Sustainable Power.
         </h1>
         

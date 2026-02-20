@@ -45,19 +45,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Metrics Section */}
-      <section className="bg-white border-y border-slate-100 py-20 px-8 md:px-24 grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
-        <div>
-          <div className="text-4xl font-serif font-medium text-blue-900 mb-2">50 MW</div>
-          <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Active Capacity</div>
-        </div>
-        <div>
-          <div className="text-4xl font-serif font-medium text-blue-900 mb-2">Pune</div>
-          <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Regional Focus</div>
-        </div>
-        <div>
-          <div className="text-4xl font-serif font-medium text-blue-900 mb-2">Hybrid</div>
-          <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Asset Class</div>
+      {/* Key Metrics Section - Aligned edge-to-edge to match Header */}
+      <section className="bg-white border-y border-slate-100 py-20 px-8 md:px-24 w-full relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
+          
+          {/* Left (Anchors perfectly under Logo) */}
+          <div className="text-center md:text-left">
+            <div className="text-4xl font-serif font-medium text-blue-900 mb-2">25-50 MW</div>
+            <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Active Capacity</div>
+          </div>
+          
+          {/* Center */}
+          <div className="text-center">
+            <div className="text-4xl font-serif font-medium text-blue-900 mb-2">Pune</div>
+            <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Regional Focus</div>
+          </div>
+          
+          {/* Right (Anchors perfectly under Menu) */}
+          <div className="text-center md:text-right">
+            <div className="text-4xl font-serif font-medium text-blue-900 mb-2">Hybrid</div>
+            <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Asset Class</div>
+          </div>
+
         </div>
       </section>
 

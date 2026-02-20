@@ -23,7 +23,7 @@ export default function Navbar() {
                 <span className="font-meridian text-2xl md:text-2xl text-[#1A2B45]/40 mx-2 md:mx-3 pb-1">|</span>
                 {/* Solid Navy Blue 'Renewables' */}
                 <span className="font-meridian text-2xl md:text-2xl text-[#1A2B45] tracking-wide group-hover:opacity-80 transition-opacity">
-                  Renewables
+                  Energy
                 </span>
               </div>
             </Link>

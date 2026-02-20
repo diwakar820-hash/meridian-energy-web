@@ -21,7 +21,7 @@ export default function Footer() {
                 <span className="text-3xl font-semibold text-white/50 mx-3 pb-1">|</span>
                 {/* Solid White 'Renewables' */}
                 <span className="font-meridian text-2xl text-white tracking-wide group-hover:opacity-80 transition-opacity">
-                  Renewables
+                  Energy
                 </span>
               </div>
             </Link>

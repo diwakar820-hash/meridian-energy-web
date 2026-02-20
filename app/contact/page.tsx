@@ -2,61 +2,58 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900 font-sans pt-32 px-8 md:px-24 pb-20">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-serif font-medium text-blue-900 mb-6 pb-6 border-b border-slate-100">
-          Contact Us
-        </h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
+        {/* Header Section */}
+        <h1 className="text-4xl md:text-5xl font-serif font-medium text-blue-900 mb-6 pb-6 border-b border-slate-100">
+          Corporate Inquiries
+        </h1>
+        <p className="text-lg text-slate-600 max-w-3xl leading-relaxed mb-16">
+          Connect with our origination and investor relations teams. Meridian Energy is actively executing a 50 MW pilot to anchor our 500 MW development pipeline and our ultimate 10 GW vision by 2035. We welcome inquiries from strategic capital partners and utility stakeholders.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           
-          {/* Left Column: Corporate Info */}
-          <div>
-            <h2 className="text-2xl font-serif text-slate-900 mb-6">Corporate Headquarters</h2>
-            <div className="text-slate-600 space-y-8 leading-relaxed">
-              
-              <div>
-                <p className="font-semibold text-slate-900">Meridian Energy Private Limited</p>
-                <p>Meridian Group</p>
+          {/* Contact Information & HQ */}
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-xs font-bold text-blue-900 uppercase tracking-widest mb-4">Headquarters</h3>
+              <address className="not-italic text-slate-600 text-lg space-y-2 leading-relaxed">
+                <p className="font-serif text-2xl text-slate-900 mb-4">Meridian Group</p>
                 <p>Pune, Maharashtra</p>
                 <p>India</p>
+              </address>
+            </div>
+            
+            <div className="pt-8 border-t border-slate-100">
+              <h3 className="text-xs font-bold text-blue-900 uppercase tracking-widest mb-4">Direct Channels</h3>
+              <div className="space-y-4">
+                <p className="text-slate-600"><strong className="text-slate-900 font-medium">Investor Relations:</strong> ir@meridianenergy.in</p>
+                <p className="text-slate-600"><strong className="text-slate-900 font-medium">Commercial Development:</strong> dev@meridianenergy.in</p>
               </div>
-              
-              <div>
-                <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Direct Inquiries</h3>
-                <p>Email: info@meridianenergy.in</p>
-                <p>Phone: +91 90106 33445</p>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Investor Relations</h3>
-                <p>investors@meridianenergy.in</p>
-              </div>
-
             </div>
           </div>
 
-          {/* Right Column: Inquiry Form */}
-          <div className="bg-slate-50 p-8 md:p-10 border border-slate-100 shadow-sm">
-            <h2 className="text-xl font-serif text-slate-900 mb-6">Send an Inquiry</h2>
-            
-            {/* Make sure your Formspree link stays here! */}
-            <form action="YOUR_FORMSPREE_LINK_HERE" method="POST" className="space-y-6">
+          {/* Institutional Contact Form */}
+          <div className="bg-slate-50 p-8 md:p-10 border border-slate-100">
+            <h3 className="text-2xl font-serif text-slate-900 mb-8">Send a Message</h3>
+            <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
-                <input type="text" id="name" name="name" required className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="John Doe" />
+                <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Full Name</label>
+                <input type="text" className="w-full border-b border-slate-300 py-2 bg-transparent focus:outline-none focus:border-blue-900 transition" />
               </div>
               <div>
-                <label htmlFor="organization" className="block text-sm font-medium text-slate-700 mb-1">Organization</label>
-                <input type="text" id="organization" name="organization" className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="Company Name" />
+                <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Institutional Email</label>
+                <input type="email" className="w-full border-b border-slate-300 py-2 bg-transparent focus:outline-none focus:border-blue-900 transition" />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-                <input type="email" id="email" name="email" required className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="john@company.com" />
+                <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Organization</label>
+                <input type="text" className="w-full border-b border-slate-300 py-2 bg-transparent focus:outline-none focus:border-blue-900 transition" />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">Message</label>
-                <textarea id="message" name="message" required rows={4} className="w-full border border-slate-300 px-4 py-3 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 bg-white transition" placeholder="How can we help you?"></textarea>
+                <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Inquiry Details</label>
+                <textarea rows={4} className="w-full border-b border-slate-300 py-2 bg-transparent focus:outline-none focus:border-blue-900 transition resize-none"></textarea>
               </div>
-              <button type="submit" className="w-full bg-blue-900 text-white px-8 py-4 text-sm font-semibold tracking-wide hover:bg-blue-800 transition shadow-md">
+              <button type="button" className="w-full bg-slate-900 text-white font-bold text-sm tracking-widest uppercase py-4 hover:bg-blue-900 transition shadow-md mt-4">
                 SUBMIT INQUIRY
               </button>
             </form>

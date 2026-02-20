@@ -54,12 +54,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
+          {/* Column 4: Contact & Investor Portal */}
           <div className="md:col-span-4 lg:col-span-2">
             <h4 className="font-medium mb-6 text-sm text-white">Contact</h4>
             <ul className="space-y-4 text-sm text-slate-400">
               <li><Link href="/contact" className="hover:text-white transition">Contact Us</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition">Investor Relations</Link></li>
+              {/* FIXED: Links now point to your Macquarie-style Investor Dashboard */}
+              <li><Link href="/portal" className="hover:text-white transition">Investor Relations</Link></li>
+              <li><Link href="/portal" className="hover:text-white transition text-blue-400 font-semibold">Partner Login &rarr;</Link></li>
             </ul>
           </div>
 
@@ -75,7 +77,7 @@ export default function Footer() {
 
         </div>
         
-        {/* Bottom Section: Legal Bar & Copyright */}
+        {/* Bottom Section: Legal Bar & Aligned Copyright */}
         <div className="mt-24 pt-8 border-t border-slate-800 flex flex-col lg:flex-row justify-between items-start lg:items-center text-xs text-slate-500 space-y-6 lg:space-y-0">
           
           <div className="flex flex-wrap gap-6">
@@ -85,8 +87,11 @@ export default function Footer() {
             <Link href="#" className="hover:text-slate-300 transition">Privacy Notice</Link>
           </div>
           
-          <div className="flex gap-2 text-slate-400">
-            &copy; {new Date().getFullYear()} | Meridian Energy Private Limited. | All rights reserved.
+          {/* Aligned like Header: Left, Center, Right in the Flexbox */}
+          <div className="flex gap-1 text-slate-400">
+            <span>&copy; {new Date().getFullYear()}</span>
+            <span>| Meridian Energy Private Limited. |</span>
+            <span>All rights reserved.</span>
           </div>
 
         </div>

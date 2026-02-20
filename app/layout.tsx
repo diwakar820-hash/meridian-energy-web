@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'; // ADDED: We import your new Footer component!
+import Footer from './components/Footer'; 
 
-// Premium SEO and Social Sharing Data
+// UPGRADED SEO: Now explicitly mentions the 10 GW expansion roadmap
 export const metadata: Metadata = {
   title: 'Meridian Energy | Institutional Renewable Infrastructure',
-  description: 'Developing high-yield, utility-scale renewable assets. Currently advancing a flagship 50 MW hybrid energy project to accelerate the energy transition in Maharashtra.',
+  description: 'Developing high-yield, utility-scale renewable assets. Executing a 50 MW pilot to anchor a 500 MW pipeline by 2029 and a 10 GW vision by 2035.',
   icons: {
     icon: '/icon.png',
   },
   openGraph: {
     title: 'Meridian Energy | Strategic Capital. Sustainable Power.',
-    description: 'Developing high-yield, utility-scale renewable infrastructure in India.',
+    description: 'Executing a 50 MW pilot to anchor a 10 GW renewable infrastructure vision by 2035.',
     url: 'https://meridianenergy.in', 
     siteName: 'Meridian Energy',
     locale: 'en_IN',
@@ -28,18 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans text-slate-900 bg-white min-h-screen flex flex-col">
-        
-        {/* Interactive Navigation Component */}
         <Navbar />
-
-        {/* Individual Pages Load Here */}
         <div className="flex-grow">
           {children}
         </div>
-        
-        {/* Our new separated Footer Component */}
         <Footer />
-
       </body>
     </html>
   )

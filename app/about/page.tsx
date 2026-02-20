@@ -5,43 +5,40 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white text-slate-900 font-sans pt-32 px-8 md:px-24 pb-20">
       <div className="max-w-5xl mx-auto">
         
-        {/* Header Section */}
         <h1 className="text-4xl md:text-5xl font-serif font-medium text-blue-900 mb-8 pb-6 border-b border-slate-100">
           Strategic Capital. Sustainable Power.
         </h1>
         
-        {/* Main Strategy Text */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
           <div className="md:col-span-2 text-lg text-slate-600 space-y-6">
             <p className="leading-relaxed">
-              Meridian Energy is driven by a singular mission: to accelerate the transition to sustainable power through strategic, high-yield renewable assets. Rooted in Pune, Maharashtra, we leverage deep market insights to develop premium utility-scale infrastructure.
+              Meridian Energy is driven by a singular mission: to accelerate the transition to sustainable power through strategic, high-yield renewable assets. We leverage deep market insights to develop premium utility-scale infrastructure.
             </p>
             <p className="leading-relaxed">
-              Our approach combines rigorous ESG standards with institutional-grade execution. By benchmarking against the highest global and domestic energy standards, we ensure our projects deliver both exceptional operational performance and enduring environmental value.
+              Our approach combines rigorous ESG standards with institutional-grade execution. By initiating our operations with a foundational 50 MW hybrid pilot, we are establishing the robust operational and financial frameworks required to rapidly execute our 500 MW pipeline by 2029, scaling toward a definitive 10 GW portfolio by 2035.
             </p>
           </div>
           
-          {/* Quick Facts / Mandate Sidebar */}
+          {/* REVISED: The Roadmap Sidebar */}
           <div className="bg-slate-50 p-8 border border-slate-100">
-             <h3 className="text-xs font-bold text-blue-900 uppercase tracking-widest mb-6">Current Mandate</h3>
+             <h3 className="text-xs font-bold text-blue-900 uppercase tracking-widest mb-6">Execution Roadmap</h3>
              <ul className="space-y-4 text-sm">
                 <li className="border-b border-slate-200 pb-2">
-                  <span className="block text-slate-400 font-medium mb-1">ASSET CLASS</span>
-                  <span className="text-slate-900 font-semibold">Hybrid Renewable Energy</span>
+                  <span className="block text-slate-400 font-medium mb-1">PHASE 1 (ACTIVE)</span>
+                  <span className="text-slate-900 font-semibold">50 MW Hybrid Pilot</span>
                 </li>
                 <li className="border-b border-slate-200 pb-2">
-                  <span className="block text-slate-400 font-medium mb-1">TARGET CAPACITY</span>
-                  <span className="text-slate-900 font-semibold">50 MW Pipeline</span>
+                  <span className="block text-slate-400 font-medium mb-1">PHASE 2 (2029)</span>
+                  <span className="text-slate-900 font-semibold">500 MW Pipeline</span>
                 </li>
                 <li className="pb-2">
-                  <span className="block text-slate-400 font-medium mb-1">GEOGRAPHY</span>
-                  <span className="text-slate-900 font-semibold">Maharashtra, India</span>
+                  <span className="block text-slate-400 font-medium mb-1">PHASE 3 (2035)</span>
+                  <span className="text-slate-900 font-semibold">10 GW Vision</span>
                 </li>
              </ul>
           </div>
         </div>
         
-        {/* Core Values Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20 border-t border-slate-100 pt-16">
           <div>
             <h3 className="text-2xl font-serif text-slate-900 mb-4">Institutional Execution</h3>
@@ -53,7 +50,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Call to Action Bottom */}
         <div className="mt-24 bg-slate-900 p-12 text-center">
            <h2 className="text-2xl font-serif text-white mb-4">Explore Our Operations</h2>
            <p className="text-slate-400 mb-8 max-w-2xl mx-auto">

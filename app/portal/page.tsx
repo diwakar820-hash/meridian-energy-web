@@ -5,10 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function InvestorPortalPage() {
-  // 1. State for the scroll-spy navigation
   const [activeSection, setActiveSection] = useState("updates");
-  
-  // 2. NEW: State to manage which Resource accordion is currently open
   const [openResource, setOpenResource] = useState<string | null>(null);
 
   useEffect(() => {
@@ -40,7 +37,6 @@ export default function InvestorPortalPage() {
     }`;
   };
 
-  // NEW: Helper function to toggle the resource dropdowns
   const toggleResource = (resource: string) => {
     setOpenResource(openResource === resource ? null : resource);
   };
@@ -53,7 +49,7 @@ export default function InvestorPortalPage() {
         <div className="max-w-[1200px] mx-auto px-8 flex space-x-8 text-sm font-semibold whitespace-nowrap">
           <Link href="#updates" className={getLinkClass("updates")}>Updates</Link>
           <Link href="#performance" className={getLinkClass("performance")}>Asset performance</Link>
-          <Link href="#registry" className={getLinkClass("registry")}>Manage your investment</Link>  
+          <Link href="#registry" className={getLinkClass("registry")}>Manage your investment</Link>          
           <Link href="#calendar" className={getLinkClass("calendar")}>Financial calendar</Link>
           <Link href="#videos" className={getLinkClass("videos")}>Latest videos</Link>
           <Link href="#resources" className={getLinkClass("resources")}>Resources</Link>
@@ -65,16 +61,16 @@ export default function InvestorPortalPage() {
         {/* SECTION: 2026 Operational Briefing */}
         <section id="updates" className="scroll-mt-48 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-8">
           <div>
-            <h1 className="text-4xl font-light text-slate-900 mb-6">2026 Operational Briefing</h1>
+            <h1 className="text-4xl font-light text-slate-900 mb-6">2026 Capital Deployment</h1>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              Meridian Energy held its 2026 Operational Briefing and third quarter trading update on Tuesday, 10 February 2026, targeting our 25-50 MW Maharashtra Hybrid development.
+              Meridian Energy has initiated capital deployment for its foundational 25-50 MW Firm Dispatchable Renewable Energy (FDRE) hybrid asset. Anchored near high-voltage MSETCL infrastructure in Maharashtra, this facility executes a diversified revenue strategy across Direct Captive, Group Captive (GC), Merchant, and Open Access (OA) frameworks for tier-one industrial off-takers.
             </p>
             <button className="bg-[#1A2B45] hover:bg-[#005F88] text-white px-8 py-3 text-sm font-medium transition shadow-sm">
-              Explore key highlights
+              Explore FDRE metrics
             </button>
           </div>
           <div className="relative aspect-video bg-slate-100 group cursor-pointer overflow-hidden">
-             <Image src="/facility.jpg" alt="Operational Briefing" fill className="object-cover group-hover:scale-105 transition duration-700" />
+             <div className="absolute inset-0 bg-gradient-to-tr from-[#005F88] to-[#00A88F] group-hover:scale-105 transition duration-700 opacity-90"></div>
              <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center">
                 <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 transition">
                   <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -86,35 +82,35 @@ export default function InvestorPortalPage() {
         {/* SECTION: Asset Performance */}
         <section id="performance" className="scroll-mt-48 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-16 border-t border-slate-100">
           <div className="space-y-4">
-            <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
-            <h3 className="text-lg font-medium text-slate-900">Results and presentations</h3>
-            <p className="text-sm text-slate-500 leading-relaxed">Financial results, reporting and presentations.</p>
+            <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" /></svg>
+            <h3 className="text-lg font-medium text-slate-900">FDRE Yield Metrics</h3>
+            <p className="text-sm text-slate-500 leading-relaxed">Integrated capacity utilization factors across solar, wind, and BESS architecture.</p>
             <Link href="#" className="inline-flex items-center text-sm text-[#1A2B45] hover:text-[#005F88] font-bold group pt-4">
-              <span className="mr-2 group-hover:translate-x-1 transition-transform">&rarr;</span> Learn more
-            </Link>
-          </div>
-          <div className="space-y-4">
-            <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" /></svg>
-            <h3 className="text-lg font-medium text-slate-900">Reports</h3>
-            <p className="text-sm text-slate-500 leading-relaxed">Annual and half-year financial reports for the fund.</p>
-            <Link href="#" className="inline-flex items-center text-sm text-[#1A2B45] hover:text-[#005F88] font-bold group pt-4">
-              <span className="mr-2 group-hover:translate-x-1 transition-transform">&rarr;</span> Learn more
-            </Link>
-          </div>
-          <div className="space-y-4">
-            <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" /><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" /></svg>
-            <h3 className="text-lg font-medium text-slate-900">ESG Disclosures</h3>
-            <p className="text-sm text-slate-500 leading-relaxed">Dividend payments, history and structural frameworks.</p>
-            <Link href="#" className="inline-flex items-center text-sm text-[#1A2B45] hover:text-[#005F88] font-bold group pt-4">
-              <span className="mr-2 group-hover:translate-x-1 transition-transform">&rarr;</span> Learn more
+              <span className="mr-2 group-hover:translate-x-1 transition-transform">&rarr;</span> View reports
             </Link>
           </div>
           <div className="space-y-4">
             <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <h3 className="text-lg font-medium text-slate-900">Debt investors</h3>
-            <p className="text-sm text-slate-500 leading-relaxed">Direct debt issuance and funding strategy, green financing and credit ratings.</p>
+            <h3 className="text-lg font-medium text-slate-900">Revenue & Equity Portfolios</h3>
+            <p className="text-sm text-slate-500 leading-relaxed">Equity distributions, PPA compliance, and tariff savings across Captive, Merchant, and OA pipelines.</p>
             <Link href="#" className="inline-flex items-center text-sm text-[#1A2B45] hover:text-[#005F88] font-bold group pt-4">
-              <span className="mr-2 group-hover:translate-x-1 transition-transform">&rarr;</span> Learn more
+              <span className="mr-2 group-hover:translate-x-1 transition-transform">&rarr;</span> Access data
+            </Link>
+          </div>
+          <div className="space-y-4">
+            <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" /></svg>
+            <h3 className="text-lg font-medium text-slate-900">Land & Lease Frameworks</h3>
+            <p className="text-sm text-slate-500 leading-relaxed">Strategic land acquisition and long-term lease models across Ahmednagar, Satara, and Sangli.</p>
+            <Link href="#" className="inline-flex items-center text-sm text-[#1A2B45] hover:text-[#005F88] font-bold group pt-4">
+              <span className="mr-2 group-hover:translate-x-1 transition-transform">&rarr;</span> Read strategy
+            </Link>
+          </div>
+          <div className="space-y-4">
+            <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+            <h3 className="text-lg font-medium text-slate-900">MSETCL Grid Integration</h3>
+            <p className="text-sm text-slate-500 leading-relaxed">Evacuation analytics for 400kV and 220kV substation connectivity and grid stabilization.</p>
+            <Link href="#" className="inline-flex items-center text-sm text-[#1A2B45] hover:text-[#005F88] font-bold group pt-4">
+              <span className="mr-2 group-hover:translate-x-1 transition-transform">&rarr;</span> View analytics
             </Link>
           </div>
         </section>
@@ -122,20 +118,20 @@ export default function InvestorPortalPage() {
         {/* SECTION: Manage Your Shares / Partner Registry */}
         <section id="registry" className="scroll-mt-48 grid grid-cols-1 lg:grid-cols-3 gap-16 pt-16 border-t border-slate-100">
           <div className="lg:col-span-2 space-y-6">
-            <h2 className="text-3xl font-light text-slate-900 mb-6">Manage your investment</h2>
-            <p className="text-slate-900 font-medium text-sm mb-4">Manage your current holdings, distribution information and document receipt preferences.</p>
-            <p className="text-slate-600 text-sm leading-relaxed mb-4">As a partner, you have the following rights in relation to receiving documents:</p>
+            <h2 className="text-3xl font-light text-slate-900 mb-6">Manage your energy portfolio</h2>
+            <p className="text-slate-900 font-medium text-sm mb-4">Access your equity allotments, distribution schedules, and PPA compliance documents across our diverse asset base.</p>
+            <p className="text-slate-600 text-sm leading-relaxed mb-4">As a strategic partner in a Meridian Energy asset (Captive, GC, or OA), you have direct control over your administrative preferences:</p>
             <ul className="list-disc pl-5 space-y-2 text-sm text-slate-600">
-              <li>You can elect to be sent certain documents in physical form or in electronic form, including documents relating to a general meeting of partners, a partners' resolution, the annual report or documents specified in the regulations.</li>
-              <li>A standing election, to be applied generally to all documents, or a specified class of documents.</li>
-              <li>You can elect not to be sent an annual report or any document prescribed in the regulations.</li>
+              <li>Manage electronic delivery elections for statutory energy offsets and hybrid generation reports.</li>
+              <li>Review live dashboards mapping your facility's energy draw against Meridian's centralized dispatch.</li>
+              <li>Access annual financial reports, board resolutions, and capital calls for subsequent expansion phases.</li>
             </ul>
           </div>
           <div className="bg-slate-50 p-8 border border-slate-100 h-fit">
-            <h2 className="text-2xl font-light text-slate-900 mb-6">Contact our Partner Registry</h2>
+            <h2 className="text-2xl font-light text-slate-900 mb-6">Contact the Partner Registry</h2>
             <div className="space-y-2 text-sm text-slate-600 mb-8">
-              <p>India Operations: +91 20 1234 5678</p>
-              <p>Global Enquiries: +91 20 8765 4321</p>
+              <p>Pune Operations: +91 20 1234 5678</p>
+              <p>Equity Enquiries: +91 20 8765 4321</p>
             </div>
             <button className="w-full bg-[#1A2B45] hover:bg-[#005F88] text-white py-3 text-sm font-medium transition shadow-sm">
               Login to Partner Centre
@@ -146,63 +142,61 @@ export default function InvestorPortalPage() {
         {/* SECTION: Financial Calendar */}
         <section id="calendar" className="scroll-mt-48 pt-16 border-t border-slate-100 grid grid-cols-1 lg:grid-cols-3 gap-16">
           <div className="lg:col-span-1">
-            <h2 className="text-3xl font-light text-slate-900">Financial calendar</h2>
+            <h2 className="text-3xl font-light text-slate-900">Deployment calendar</h2>
           </div>
           <div className="lg:col-span-2">
              <div className="flex border-b border-slate-300 pb-3 mb-3">
-               <div className="w-1/2 font-semibold text-slate-900 text-sm">Event</div>
-               <div className="w-1/2 font-semibold text-slate-900 text-sm">Date</div>
+               <div className="w-1/2 font-semibold text-slate-900 text-sm">Milestone</div>
+               <div className="w-1/2 font-semibold text-slate-900 text-sm">Target Date</div>
              </div>
              <div className="flex border-b border-slate-200 py-4 hover:bg-slate-50 transition px-2">
-               <div className="w-1/2 text-sm text-slate-600">Q1 Asset Yield Payment Date</div>
-               <div className="w-1/2 text-sm text-slate-900">Wednesday, 17 December 2025</div>
+               <div className="w-1/2 text-sm text-slate-600">Q1 Multi-Asset Equity Allocation</div>
+               <div className="w-1/2 text-sm text-slate-900">Monday, 16 March 2026</div>
              </div>
              <div className="flex border-b border-slate-200 py-4 hover:bg-slate-50 transition px-2">
-               <div className="w-1/2 text-sm text-slate-600">Meridian Group 2026 Operational Briefing</div>
-               <div className="w-1/2 text-sm text-slate-900">Tuesday, 10 February 2026</div>
+               <div className="w-1/2 text-sm text-slate-600">Substation Connectivity Approval (MSETCL)</div>
+               <div className="w-1/2 text-sm text-slate-900">Friday, 10 April 2026</div>
              </div>
              <div className="flex border-b border-slate-200 py-4 hover:bg-slate-50 transition px-2">
-               <div className="w-1/2 text-sm text-slate-600">2026 Full Year Result announcement</div>
-               <div className="w-1/2 text-sm text-slate-900">Friday, 8 May 2026</div>
+               <div className="w-1/2 text-sm text-slate-600">FY26 Capital Expenditure Briefing</div>
+               <div className="w-1/2 text-sm text-slate-900">Tuesday, 12 May 2026</div>
              </div>
           </div>
         </section>
 
         {/* SECTION: Latest Videos */}
         <section id="videos" className="scroll-mt-48 pt-16 border-t border-slate-100">
-          <h2 className="text-3xl font-light text-slate-900 mb-10">Latest videos</h2>
+          <h2 className="text-3xl font-light text-slate-900 mb-10">Asset intelligence</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              <div className="relative aspect-video bg-slate-200 group cursor-pointer overflow-hidden">
-                <Image src="/facility.jpg" alt="Video thumbnail" fill className="object-cover group-hover:scale-105 transition duration-700" />
+              <div className="relative aspect-video bg-gradient-to-br from-[#1A2B45] to-slate-800 group cursor-pointer overflow-hidden">
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                   <div className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 transition">
                     <svg className="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                   </div>
                 </div>
               </div>
-              <h3 className="text-lg text-slate-900">2026 half-year result - MD Overview</h3>
-              <p className="text-xs text-slate-400">07 November 2025</p>
+              <h3 className="text-lg text-slate-900">FDRE Architecture: Integrating Solar, Wind & BESS</h3>
+              <p className="text-xs text-slate-400">February 2026 Briefing</p>
             </div>
             
             <div className="space-y-4">
-              <div className="relative aspect-video bg-slate-200 group cursor-pointer overflow-hidden">
-                <Image src="/facility.jpg" alt="Video thumbnail" fill className="object-cover group-hover:scale-105 transition duration-700" />
+              <div className="relative aspect-video bg-gradient-to-br from-[#005F88] to-[#00A88F] group cursor-pointer overflow-hidden">
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                   <div className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 transition">
                     <svg className="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                   </div>
                 </div>
               </div>
-              <h3 className="text-lg text-slate-900">Driving innovation in hybrid assets</h3>
-              <p className="text-xs text-slate-400">24 July 2025</p>
+              <h3 className="text-lg text-slate-900">Revenue Diversification: GC, Merchant & OA Frameworks</h3>
+              <p className="text-xs text-slate-400">January 2026 Masterclass</p>
             </div>
           </div>
         </section>
 
       </div>
 
-      {/* SECTION: Dark Resources Footer (UPGRADED WITH FUNCTIONAL ACCORDIONS) */}
+      {/* SECTION: Dark Resources Footer */}
       <section id="resources" className="scroll-mt-48 bg-black text-white pt-24 pb-16 px-8">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="text-3xl font-light mb-12">Resources</h2>
@@ -276,7 +270,7 @@ export default function InvestorPortalPage() {
                     </div>
                     <div className="p-4 bg-white/5 border border-slate-800">
                       <strong className="text-white block">Series A Preferred Equity</strong>
-                      <p className="mt-1">Private Placement - Group Captive Partners</p>
+                      <p className="mt-1">Private Placement - Captive & OA Partners</p>
                     </div>
                   </div>
                 </div>

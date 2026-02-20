@@ -18,9 +18,9 @@ export default function Footer() {
                   meridian
                 </span>
                 {/* Subtle White Divider */}
-                <span className="text-3xl font-light text-white/50 mx-3 pb-1">|</span>
+                <span className="text-3xl font-semibold text-white/50 mx-3 pb-1">|</span>
                 {/* Solid White 'Renewables' */}
-                <span className="text-3xl font-medium text-white tracking-wide group-hover:opacity-80 transition-opacity">
+                <span className="font-meridian text-2xl text-white tracking-wide group-hover:opacity-80 transition-opacity">
                   Renewables
                 </span>
               </div>

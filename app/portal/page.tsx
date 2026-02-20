@@ -52,8 +52,8 @@ export default function InvestorPortalPage() {
       <div className="sticky top-24 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 overflow-x-auto shadow-sm">
         <div className="max-w-[1200px] mx-auto px-8 flex space-x-8 text-sm font-semibold whitespace-nowrap">
           <Link href="#updates" className={getLinkClass("updates")}>Updates</Link>
-          <Link href="#registry" className={getLinkClass("registry")}>Manage your investment</Link>
           <Link href="#performance" className={getLinkClass("performance")}>Asset performance</Link>
+          <Link href="#registry" className={getLinkClass("registry")}>Manage your investment</Link>  
           <Link href="#calendar" className={getLinkClass("calendar")}>Financial calendar</Link>
           <Link href="#videos" className={getLinkClass("videos")}>Latest videos</Link>
           <Link href="#resources" className={getLinkClass("resources")}>Resources</Link>

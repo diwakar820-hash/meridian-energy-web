@@ -25,7 +25,7 @@ export default function Home() {
             Powering the future through strategic renewable assets.
           </h1>
           <p className="text-lg md:text-xl text-slate-200 max-w-2xl mb-10 leading-relaxed">
-            Developing high-yield, utility-scale infrastructure. Currently advancing a foundational 50 MW hybrid pilot in Maharashtra, Establishing the operational framework to scale upto 500 MW by 2029 and a 10 GW vision by 2035.
+            "Building a multi-gigawatt clean energy platform. From our 50 MW foundational hybrid pilot in Maharashtra, we are institutionalizing the operational frameworks required to scale 500 MW of high-yield capacity by 2029, driving toward a 10 GW vision."
           </p>
           <Link
             href="/portfolio"

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white py-20 px-8 md:px-12 lg:px-24 mt-20">
+    <footer className="bg-slate-900 text-white py-20 px-8 md:px-12 lg:px-24 border-t border-slate-800">
       <div className="max-w-[1400px] mx-auto w-full">
         
         {/* Top Section: Multi-Column Grid */}

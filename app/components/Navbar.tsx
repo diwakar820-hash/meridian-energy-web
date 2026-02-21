@@ -50,12 +50,12 @@ export default function Navbar() {
                       <p className="text-sm text-slate-600 leading-relaxed mb-8">
                         Moving beyond carbon neutral on paper. Meridian Energy integrates utility-scale solar, wind, and storage into a unified platform, delivering physical 24/7 Carbon-Free Energy to accommodate India's 500 GW ambition and meet rigorous corporate Net Zero targets.
                       </p>
-                      <Link href="#" className="inline-flex items-center text-sm font-semibold text-[#1A2B45] hover:text-[#00A88F] transition group/link">
+                      <Link href="/insights/cfe" className="inline-flex items-center text-sm font-semibold text-[#1A2B45] hover:text-[#00A88F] transition group/link">
                         <span className="mr-3 text-lg font-light transition-transform group-hover/link:translate-x-1">&rarr;</span> Explore our insights
                       </Link>
                     </div>
 
-                    {/* Column 2: Operational Capabilities (The Pipeline) */}
+                    {/* Column 2: Operational Capabilities */}
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Operational Frameworks</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
@@ -69,15 +69,15 @@ export default function Navbar() {
                       </ul>
                     </div>
 
-                    {/* Column 3: Strategic Themes (The UN Compact) */}
+                    {/* Column 3: Strategic Themes (WIRED UP) */}
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Strategic Focus</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
                         <li><Link href="/insights/cfe" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-bold">24/7 Carbon-Free Energy</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">UN CFE Compact Alignment</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Time-Matched Procurement</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Beyond Carbon Neutrality</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">India's 500 GW 2030 Target</Link></li>
+                        <li><Link href="/insights/un-compact" className="text-sm text-slate-600 hover:text-[#00A88F] transition">UN CFE Compact Alignment</Link></li>
+                        <li><Link href="/insights/time-matched" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Time-Matched Procurement</Link></li>
+                        <li><Link href="/insights/beyond-neutrality" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Beyond Carbon Neutrality</Link></li>
+                        <li><Link href="/insights/india-500gw" className="text-sm text-slate-600 hover:text-[#00A88F] transition">India's 500 GW 2030 Target</Link></li>
                       </ul>
                     </div>
 
@@ -128,7 +128,7 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full max-h-screen overflow-y-auto">
           <div className="px-8 pt-4 pb-8 space-y-4 flex flex-col">
-            <Link href="#" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-[#00A88F] py-2">
+            <Link href="/insights/cfe" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-[#00A88F] py-2">
               Insights
             </Link>
             <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-[#1A2B45] py-2">

@@ -19,7 +19,7 @@ export default function Footer() {
                 </span>
                 {/* Subtle White Divider */}
                 <span className="text-3xl font-semibold text-white/50 mx-3 pb-1">|</span>
-                {/* Solid White 'Renewables' */}
+                {/* Solid White 'Energy' */}
                 <span className="font-meridian text-2xl text-white tracking-wide group-hover:opacity-80 transition-opacity">
                   Energy
                 </span>
@@ -92,10 +92,10 @@ export default function Footer() {
         <div className="mt-24 pt-8 border-t border-slate-800 flex flex-col lg:flex-row justify-between items-start lg:items-center text-xs text-slate-500 space-y-6 lg:space-y-0">
           
           <div className="flex flex-wrap gap-6">
-            <Link href="#" className="hover:text-slate-300 transition">Terms of Use</Link>
-            <Link href="#" className="hover:text-slate-300 transition">Accessibility Notice</Link>
-            <Link href="#" className="hover:text-slate-300 transition">Cookie Policy</Link>
-            <Link href="#" className="hover:text-slate-300 transition">Privacy Notice</Link>
+            <Link href="/legal#terms" className="hover:text-slate-300 transition">Terms of Use</Link>
+            <Link href="/legal#accessibility" className="hover:text-slate-300 transition">Accessibility Notice</Link>
+            <Link href="/legal#cookies" className="hover:text-slate-300 transition">Cookie Policy</Link>
+            <Link href="/legal#privacy" className="hover:text-slate-300 transition">Privacy Notice</Link>
           </div>
           
           <div className="flex gap-1 text-slate-400">

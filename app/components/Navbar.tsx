@@ -73,7 +73,7 @@ export default function Navbar() {
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Strategic Focus</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><Link href="#" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-bold">24/7 Carbon-Free Energy</Link></li>
+                        <li><Link href="/insights/cfe" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-bold">24/7 Carbon-Free Energy</Link></li>
                         <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">UN CFE Compact Alignment</Link></li>
                         <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Time-Matched Procurement</Link></li>
                         <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Beyond Carbon Neutrality</Link></li>

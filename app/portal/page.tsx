@@ -130,8 +130,8 @@ export default function InvestorPortalPage() {
           <div className="bg-slate-50 p-8 border border-slate-100 h-fit">
             <h2 className="text-2xl font-light text-slate-900 mb-6">Contact the Partner Registry</h2>
             <div className="space-y-2 text-sm text-slate-600 mb-8">
-              <p>Pune Operations: +91 20 1234 5678</p>
-              <p>Equity Enquiries: +91 20 8765 4321</p>
+              <p>Pune Operations: +91 9676 428 015</p>
+              <p>Equity Enquiries: info@meridianenergy.in</p>
             </div>
             <button className="w-full bg-[#1A2B45] hover:bg-[#005F88] text-white py-3 text-sm font-medium transition shadow-sm">
               Login to Partner Centre
@@ -218,17 +218,17 @@ export default function InvestorPortalPage() {
                 <div className="px-4 pb-8 pt-2 text-slate-400 text-sm space-y-6 animate-fade-in">
                   <div>
                     <strong className="text-white block mb-1">Global Investor Relations</strong>
-                    <p>ir@meridianenergy.in | +91 20 8765 4321</p>
+                    <p>info@meridianenergy.in | +91 9676 428 015</p>
                   </div>
                   <div>
                     <strong className="text-white block mb-1">Partner Registry Services</strong>
-                    <p>registry@meridianenergy.in | +91 20 1234 5678</p>
+                    <p>info@meridianenergy.in | +91 9676 428 015</p>
                   </div>
                 </div>
               )}
             </div>
 
-            {/* 2. Regulatory Disclosures */}
+            {/* 2. Regulatory Disclosures (RESTRICTED ACCESS) */}
             <div className="border-b border-slate-800">
               <button 
                 onClick={() => toggleResource('regulatory')}
@@ -241,10 +241,19 @@ export default function InvestorPortalPage() {
               </button>
               {openResource === 'regulatory' && (
                 <div className="px-4 pb-8 pt-2 text-slate-400 text-sm space-y-4 animate-fade-in">
-                  <p className="mb-4 text-slate-300">Access our latest statutory filings and compliance frameworks.</p>
-                  <Link href="#" className="block hover:text-white transition">↓ SEBI Compliance Certificate (Q4 2025) <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 2.1 MB</span></Link>
-                  <Link href="#" className="block hover:text-white transition">↓ Environmental & Social Governance (ESG) Framework <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 5.4 MB</span></Link>
-                  <Link href="#" className="block hover:text-white transition">↓ Grid Connection Approval - Maharashtra MSETCL <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 1.2 MB</span></Link>
+                  <p className="mb-4 text-slate-300">Access to statutory filings and compliance frameworks is restricted to authorized partners.</p>
+                  
+                  <a href="mailto:info@meridianenergy.in?subject=Request Access: SEBI Compliance Certificate" className="block hover:text-white transition group flex items-center">
+                    <span className="mr-2">↓</span> SEBI Compliance Certificate (Q4 2025) <span className="text-xs ml-3 border border-[#00A88F] text-[#00A88F] group-hover:bg-[#00A88F] group-hover:text-white transition px-2 py-1 rounded">REQUEST ACCESS</span>
+                  </a>
+                  
+                  <a href="mailto:info@meridianenergy.in?subject=Request Access: ESG Framework" className="block hover:text-white transition group flex items-center">
+                    <span className="mr-2">↓</span> Environmental & Social Governance (ESG) Framework <span className="text-xs ml-3 border border-[#00A88F] text-[#00A88F] group-hover:bg-[#00A88F] group-hover:text-white transition px-2 py-1 rounded">REQUEST ACCESS</span>
+                  </a>
+                  
+                  <a href="mailto:info@meridianenergy.in?subject=Request Access: MSETCL Grid Approval" className="block hover:text-white transition group flex items-center">
+                    <span className="mr-2">↓</span> Grid Connection Approval - Maharashtra MSETCL <span className="text-xs ml-3 border border-[#00A88F] text-[#00A88F] group-hover:bg-[#00A88F] group-hover:text-white transition px-2 py-1 rounded">REQUEST ACCESS</span>
+                  </a>
                 </div>
               )}
             </div>
@@ -277,7 +286,7 @@ export default function InvestorPortalPage() {
               )}
             </div>
 
-            {/* 4. Fund Filings */}
+            {/* 4. Fund Filings (RESTRICTED ACCESS) */}
             <div className="border-b border-slate-800">
               <button 
                 onClick={() => toggleResource('filings')}
@@ -290,8 +299,15 @@ export default function InvestorPortalPage() {
               </button>
               {openResource === 'filings' && (
                 <div className="px-4 pb-8 pt-2 text-slate-400 text-sm space-y-4 animate-fade-in">
-                  <Link href="#" className="block hover:text-white transition">↓ Articles of Association (Amended Jan 2026) <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 8.1 MB</span></Link>
-                  <Link href="#" className="block hover:text-white transition">↓ FY25 Annual Financial Statements <span className="text-xs ml-2 border border-slate-700 px-2 py-1 rounded">PDF 4.4 MB</span></Link>
+                  
+                  <a href="mailto:info@meridianenergy.in?subject=Request Access: Articles of Association" className="block hover:text-white transition group flex items-center">
+                    <span className="mr-2">↓</span> Articles of Association (Amended Jan 2026) <span className="text-xs ml-3 border border-[#00A88F] text-[#00A88F] group-hover:bg-[#00A88F] group-hover:text-white transition px-2 py-1 rounded">REQUEST ACCESS</span>
+                  </a>
+                  
+                  <a href="mailto:info@meridianenergy.in?subject=Request Access: FY25 Financials" className="block hover:text-white transition group flex items-center">
+                    <span className="mr-2">↓</span> FY25 Annual Financial Statements <span className="text-xs ml-3 border border-[#00A88F] text-[#00A88F] group-hover:bg-[#00A88F] group-hover:text-white transition px-2 py-1 rounded">REQUEST ACCESS</span>
+                  </a>
+                  
                 </div>
               )}
             </div>

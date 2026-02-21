@@ -18,7 +18,7 @@ export default function FDREPage() {
             Firm Dispatchable Renewable Energy (FDRE)
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl leading-relaxed font-light">
-            Solving the intermittency crisis. Meridian Energy engineers integrated hybrid assets that deliver baseload-profile green electricity to high-abate industrial off-takers.
+            Solving the intermittency crisis. Meridian Energy engineers integrated hybrid assets that deliver baseload-profile green electricity to high-abate industrial off-takers across India.
           </p>
         </div>
       </section>
@@ -37,18 +37,18 @@ export default function FDREPage() {
           </div>
           
           <div className="bg-slate-50 border border-slate-200 p-10 space-y-6">
-            <h3 className="text-xl font-medium text-slate-900 mb-4">The Maharashtra 25-50 MW Pilot</h3>
+            <h3 className="text-xl font-medium text-slate-900 mb-4">Strategic Capacity Deployment</h3>
             <p className="text-sm text-slate-600 leading-relaxed mb-4">
-              Our foundational deployment in the Pune and Talegaon industrial corridors serves as the operational blueprint for our 10 GW vision. 
+              Our deployments across India's premier industrial corridors serve as the operational blueprint for our 10 GW national vision. 
             </p>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <span className="text-[#00A88F] mr-3 mt-1">■</span>
-                <span className="text-sm text-slate-600"><strong>Capacity Factor Maximization:</strong> Blending solar and wind generation profiles to optimize transmission infrastructure.</span>
+                <span className="text-sm text-slate-600"><strong>Capacity Factor Maximization:</strong> Blending solar and wind generation profiles to optimize CTU and STU transmission infrastructure.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-[#00A88F] mr-3 mt-1">■</span>
-                <span className="text-sm text-slate-600"><strong>MSETCL Grid Stabilization:</strong> Providing scheduled, firm power that actively supports MSLDC load balancing requirements.</span>
+                <span className="text-sm text-slate-600"><strong>National Grid Stabilization:</strong> Providing scheduled, firm power that actively supports NLDC and SLDC load balancing requirements.</span>
               </li>
             </ul>
           </div>

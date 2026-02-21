@@ -32,7 +32,7 @@ export default function UNCompactPage() {
               Global regulatory bodies and institutional capital are shifting their focus from "intent" to "execution." The UN 24/7 CFE Compact represents the highest global standard for corporate decarbonization, demanding that every kilowatt-hour of electricity consumption is matched with carbon-free production.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Meridian Energy does not treat this compact as an aspirational goal. It is the foundational engineering mandate for our Firm Dispatchable Renewable Energy (FDRE) architecture across Maharashtra.
+              Meridian Energy does not treat this compact as an aspirational goal. It is the foundational engineering mandate for our Firm Dispatchable Renewable Energy (FDRE) architecture across our national portfolio.
             </p>
           </div>
           
@@ -41,7 +41,7 @@ export default function UNCompactPage() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <span className="text-[#00A88F] mr-3 mt-1">■</span>
-                <span className="text-sm text-slate-600"><strong>New Generation:</strong> We deploy capital strictly into new solar, wind, and BESS capacity, directly displacing fossil generation on the MSETCL grid.</span>
+                <span className="text-sm text-slate-600"><strong>New Generation:</strong> We deploy capital strictly into new solar, wind, and BESS capacity, directly displacing fossil generation on the national and state grids.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-[#00A88F] mr-3 mt-1">■</span>
@@ -49,7 +49,7 @@ export default function UNCompactPage() {
               </li>
               <li className="flex items-start">
                 <span className="text-[#00A88F] mr-3 mt-1">■</span>
-                <span className="text-sm text-slate-600"><strong>Grid Locality:</strong> Structuring Group Captive PPAs that deliver physical electrons precisely where our clients operate.</span>
+                <span className="text-sm text-slate-600"><strong>Grid Locality:</strong> Structuring Group Captive PPAs that deliver physical electrons precisely where our clients operate across India.</span>
               </li>
             </ul>
           </div>

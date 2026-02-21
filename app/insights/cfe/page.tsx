@@ -3,11 +3,10 @@ import Link from "next/link";
 export default function CarbonFreeEnergyPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900 font-sans pt-24">
-      
-      {/* HERO SECTION: The Insight Thesis */}
+      {/* HERO SECTION */}
       <section className="relative w-full bg-[#1A2B45] text-white overflow-hidden border-b-8 border-[#00A88F]">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1A2B45] via-[#005F88] to-[#1A2B45] opacity-90"></div>
-        {/* Abstract data texture */}
+       
         <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
         
         <div className="relative z-10 max-w-[1200px] mx-auto px-8 py-24 md:py-32">
@@ -25,11 +24,10 @@ export default function CarbonFreeEnergyPage() {
         </div>
       </section>
 
-      {/* THE THESIS: Two-Column Corporate Report Style */}
+      {/* THE THESIS */}
       <section className="max-w-[1200px] mx-auto px-8 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          
-          {/* Left Column: The Problem */}
+         
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl font-light text-slate-900 mb-8 border-b border-slate-200 pb-4">The Anomaly in Carbon Accounting</h2>
             <p className="text-slate-600 leading-relaxed">
@@ -43,7 +41,6 @@ export default function CarbonFreeEnergyPage() {
             </p>
           </div>
 
-          {/* Right Column: The Solution */}
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl font-light text-slate-900 mb-8 border-b border-slate-200 pb-4">The Intelligent Energy Platform</h2>
             <p className="text-slate-600 leading-relaxed">
@@ -54,7 +51,7 @@ export default function CarbonFreeEnergyPage() {
             </p>
             <div className="bg-slate-50 p-6 border-l-4 border-[#00A88F] mt-8">
               <p className="text-sm font-medium text-slate-900 italic">
-                "Our flagship Maharashtra hybrid deployment is engineered to deliver time-matched, dispatchable carbon-free energy—matching industrial electricity consumption anywhere, anytime, to accelerate the drive toward a true Zero Carbon future."
+                "Our flagship hybrid deployments are engineered to deliver time-matched, dispatchable carbon-free energy—matching industrial electricity consumption anywhere across the national grid, to accelerate the drive toward a true Zero Carbon future."
               </p>
             </div>
           </div>
@@ -62,7 +59,7 @@ export default function CarbonFreeEnergyPage() {
         </div>
       </section>
 
-      {/* THE UN COMPACT: Strict, Clinical Breakdown (UI FIXED HERE) */}
+      {/* THE UN COMPACT */}
       <section className="bg-slate-900 text-white py-24">
         <div className="max-w-[1200px] mx-auto px-8">
           <div className="mb-16 max-w-3xl">
@@ -72,9 +69,8 @@ export default function CarbonFreeEnergyPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-12">
-            
-            {/* Principle 1 */}
+          <div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-12">
             <div className="border-t border-slate-700 pt-6">
               <div className="text-4xl font-light text-[#00A88F] mb-4">01.</div>
               <h3 className="text-xl font-medium text-white mb-3">Time-Matched Procurement</h3>
@@ -83,17 +79,17 @@ export default function CarbonFreeEnergyPage() {
               </p>
             </div>
 
-            {/* Principle 2 */}
-            <div className="border-t border-slate-700 pt-6">
+            <div 
+            className="border-t border-slate-700 pt-6">
               <div className="text-4xl font-light text-[#00A88F] mb-4">02.</div>
               <h3 className="text-xl font-medium text-white mb-3">Local Procurement</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Purchasing clean energy on the local grids (e.g., MSETCL) where the electricity consumption actually occurs, driving the related emissions of the consumer to absolute zero.
+                Purchasing clean energy on local and interstate grids (e.g., CTU/STU networks) where the electricity consumption actually occurs, driving the related emissions of the consumer to absolute zero.
               </p>
             </div>
 
-            {/* Principle 3 */}
-            <div className="border-t border-slate-700 pt-6">
+            <div 
+            className="border-t border-slate-700 pt-6">
               <div className="text-4xl font-light text-[#00A88F] mb-4">03.</div>
               <h3 className="text-xl font-medium text-white mb-3">Technology Inclusive</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
@@ -101,7 +97,6 @@ export default function CarbonFreeEnergyPage() {
               </p>
             </div>
 
-            {/* Principle 4 */}
             <div className="border-t border-slate-700 pt-6">
               <div className="text-4xl font-light text-[#00A88F] mb-4">04.</div>
               <h3 className="text-xl font-medium text-white mb-3">Enable New Generation</h3>
@@ -110,7 +105,6 @@ export default function CarbonFreeEnergyPage() {
               </p>
             </div>
 
-            {/* Principle 5 */}
             <div className="border-t border-slate-700 pt-6">
               <div className="text-4xl font-light text-[#00A88F] mb-4">05.</div>
               <h3 className="text-xl font-medium text-white mb-3">Maximize System Impact</h3>

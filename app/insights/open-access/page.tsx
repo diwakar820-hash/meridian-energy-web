@@ -18,7 +18,7 @@ export default function OpenAccessPage() {
             Open Access (OA) Markets
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl leading-relaxed font-light">
-            Providing tier-one industrials with flexible, mid-term decarbonization solutions through the MSETCL transmission grid.
+            Providing tier-one industrials with flexible, mid-term decarbonization solutions through India's interstate and intrastate transmission networks.
           </p>
         </div>
       </section>
@@ -31,8 +31,11 @@ export default function OpenAccessPage() {
             <p className="text-slate-600 leading-relaxed">
               While Group Captive structures provide deep discounts through equity participation, certain multinational corporations require procurement agility without the regulatory overhead of owning generation assets. 
             </p>
+            <p className="text-slate-600 leading-relaxed font-medium my-6">
+              
+            </p>
             <p className="text-slate-600 leading-relaxed">
-              For these partners, Meridian Energy executes Third-Party Open Access (OA) agreements. Leveraging our high-voltage substation connectivity, we wheel power directly through the Maharashtra State Electricity Transmission Company (MSETCL) grid to the client's facility.
+              For these partners, Meridian Energy executes Third-Party Open Access (OA) agreements. Leveraging our high-voltage substation connectivity, we wheel power directly through Central and State Transmission Utilities (CTU/STU) to the client's facility, regardless of geographic borders.
             </p>
             
             <h3 className="text-xl font-medium text-slate-900 mt-10 mb-4">Strategic Capacity Allocation</h3>

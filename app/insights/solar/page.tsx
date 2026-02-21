@@ -31,7 +31,7 @@ export default function SolarPage() {
             Utility-scale solar remains the most cost-effective and rapidly deployable generation asset in the renewable ecosystem. However, realizing true institutional yield requires flawless execution in land acquisition, technology procurement, and grid connectivity.
           </p>
           <p className="text-slate-600 leading-relaxed">
-            Meridian Energy secures expansive contiguous land parcels across Maharashtra—specifically targeting high-irradiance zones near existing 220kV and 400kV MSETCL substations—to minimize evacuation losses and accelerate project commissioning.
+            Meridian Energy secures expansive contiguous land parcels across India's premier solar parks and high-irradiance zones—specifically targeting proximity to existing 220kV and 400kV Central and State Transmission Utility (CTU/STU) substations—to minimize evacuation losses and accelerate project commissioning.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             <div className="border-t-2 border-[#1A2B45] pt-6">
@@ -40,7 +40,7 @@ export default function SolarPage() {
             </div>
             <div className="border-t-2 border-[#00A88F] pt-6">
               <h3 className="text-lg font-medium text-slate-900 mb-2">Strategic Siting</h3>
-              <p className="text-sm text-slate-600">Rigorous pre-feasibility analysis ensures our solar assets are geographically optimized to complement parallel wind and storage infrastructure.</p>
+              <p className="text-sm text-slate-600">Rigorous pre-feasibility analysis ensures our national solar assets are geographically optimized to complement parallel wind and storage infrastructure.</p>
             </div>
           </div>
         </div>

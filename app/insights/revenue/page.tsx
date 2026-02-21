@@ -32,7 +32,7 @@ export default function RevenueStructuringPage() {
               Top-tier infrastructure development rejects reliance on singular revenue streams. To achieve rapid financial closure with domestic and international lenders, a renewable asset must demonstrate a highly resilient cash-flow profile that is immune to isolated market shocks.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Meridian Energy utilizes a "Revenue Stacking" methodology for our 25-50 MW pilot and subsequent 10 GW pipeline. We engineer each Special Purpose Vehicle (SPV) to service a diverse portfolio of off-takers, blending long-term security with short-term premium capture.
+              Meridian Energy utilizes a "Revenue Stacking" methodology for our 50 MW pilot and subsequent 10 GW pipeline. We engineer each Special Purpose Vehicle (SPV) to service a diverse portfolio of off-takers, blending long-term security with short-term premium capture.
             </p>
             <p className="text-slate-600 leading-relaxed font-medium mt-4">
               [Image of Renewable Energy Revenue Stacking chart]

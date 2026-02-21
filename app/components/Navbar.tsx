@@ -55,21 +55,22 @@ export default function Navbar() {
                       </Link>
                     </div>
 
-                    {/* Column 2: Operational Capabilities */}
+                    {/* Column 2: Operational Capabilities (NOW FULLY WIRED) */}
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Operational Frameworks</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><Link href="#" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium">Firm Dispatchable RE (FDRE)</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Utility-Scale Solar Energy</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Wind Power Infrastructure</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Battery Energy Storage (BESS)</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium mt-2 block">Revenue Structuring</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Captive & Group Captive PPAs</Link></li>
-                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Open Access (OA) Markets</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium">Firm Dispatchable RE (FDRE)</Link></li>
+                        <li><Link href="/insights/solar" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Utility-Scale Solar Energy</Link></li>
+                        <li><Link href="/insights/wind" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Wind Power Infrastructure</Link></li>
+                        <li><Link href="/insights/bess" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Battery Energy Storage (BESS)</Link></li>
+                        
+                        <li><Link href="/insights/revenue" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium mt-2 block">Revenue Structuring</Link></li>
+                        <li><Link href="/insights/group-captive" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Captive & Group Captive PPAs</Link></li>
+                        <li><Link href="/insights/open-access" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Open Access (OA) Markets</Link></li>
                       </ul>
                     </div>
 
-                    {/* Column 3: Strategic Themes (WIRED UP) */}
+                    {/* Column 3: Strategic Themes (FULLY WIRED) */}
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Strategic Focus</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">

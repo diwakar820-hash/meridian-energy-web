@@ -28,7 +28,7 @@ export default function GroupCaptivePage() {
         <div className="max-w-3xl space-y-8">
           <h2 className="text-3xl font-light text-slate-900 border-b border-slate-200 pb-4">The Equity Advantage</h2>
           <p className="text-slate-600 leading-relaxed">
-            Under the Indian Electricity Act, the Group Captive model is the most financially efficient mechanism for heavy industries to procure renewable power. It bypasses the punitive cross-subsidy surcharges (CSS) and additional surcharges (AS) levied by state DISCOMs, resulting in direct bottom-line savings of up to 30-40% on energy costs.
+            Under the Indian Electricity Act (2003) and subsequent rules, the Group Captive model is the most financially efficient mechanism for heavy industries to procure renewable power across multiple state jurisdictions. It bypasses the punitive cross-subsidy surcharges (CSS) and additional surcharges (AS) levied by state DISCOMs, resulting in direct bottom-line savings of up to 30-40% on energy costs.
           </p>
           <p className="text-slate-600 leading-relaxed font-medium">
              
@@ -41,8 +41,8 @@ export default function GroupCaptivePage() {
             <div className="bg-[#1A2B45] text-white p-8">
               <h3 className="text-lg font-medium mb-3">For Our Partners</h3>
               <ul className="space-y-3">
-                <li className="flex items-start text-sm text-slate-300"><span className="text-[#00A88F] mr-2">✓</span> Deep discount to grid tariffs.</li>
-                <li className="flex items-start text-sm text-slate-300"><span className="text-[#00A88F] mr-2">✓</span> Total waiver of CSS & AS in Maharashtra.</li>
+                <li className="flex items-start text-sm text-slate-300"><span className="text-[#00A88F] mr-2">✓</span> Deep discount to standard grid tariffs.</li>
+                <li className="flex items-start text-sm text-slate-300"><span className="text-[#00A88F] mr-2">✓</span> Waiver or significant reduction of CSS & AS across key states.</li>
                 <li className="flex items-start text-sm text-slate-300"><span className="text-[#00A88F] mr-2">✓</span> Zero-carbon Scope 2 compliance.</li>
                 <li className="flex items-start text-sm text-slate-300"><span className="text-[#00A88F] mr-2">✓</span> Predictable OPEX for 15-25 years.</li>
               </ul>

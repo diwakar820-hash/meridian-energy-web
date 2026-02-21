@@ -218,11 +218,11 @@ export default function InvestorPortalPage() {
                 <div className="px-4 pb-8 pt-2 text-slate-400 text-sm space-y-6 animate-fade-in">
                   <div>
                     <strong className="text-white block mb-1">Global Investor Relations</strong>
-                    <p>info@meridianenergy.in | +91 9676 428 015</p>
+                    <p>info@meridianenergy.in | +91 9010 633 445</p>
                   </div>
                   <div>
                     <strong className="text-white block mb-1">Partner Registry Services</strong>
-                    <p>info@meridianenergy.in | +91 9676 428 015</p>
+                    <p>info@meridianenergy.in | +91 9010 633 445</p>
                   </div>
                 </div>
               )}

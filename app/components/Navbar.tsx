@@ -15,13 +15,10 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center h-full">
             <Link href="/" className="block group">
               <div className="flex items-center">
-                {/* Custom Brand Gradient */}
                 <span className="font-meridian text-3xl md:text-4xl tracking-tight bg-gradient-to-r from-[#8CD600] via-[#00A88F] to-[#005F88] bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
                   meridian
                 </span>
-                {/* Navy Blue Divider */}
                 <span className="text-2xl md:text-3xl font-light text-[#1A2B45]/40 mx-2 md:mx-3 pb-1">|</span>
-                {/* Solid Navy Blue 'Energy' */}
                 <span className="text-2xl md:text-3xl font-medium text-[#1A2B45] tracking-wide group-hover:opacity-80 transition-opacity">
                   Energy
                 </span>
@@ -34,10 +31,11 @@ export default function Navbar() {
             
             {/* Institutional "Insights" Mega Menu */}
             <div className="group h-full flex items-center">
-              <button className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center gap-1 h-full cursor-pointer border-b-2 border-transparent group-hover:border-[#1A2B45]">
+              {/* NOW WIRED TO /insights */}
+              <Link href="/insights" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center gap-1 h-full cursor-pointer border-b-2 border-transparent group-hover:border-[#1A2B45]">
                 Insights
                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-              </button>
+              </Link>
 
               {/* The Dropdown Panel */}
               <div className="absolute top-24 left-0 w-full bg-white border-t border-slate-200 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
@@ -50,12 +48,13 @@ export default function Navbar() {
                       <p className="text-sm text-slate-600 leading-relaxed mb-8">
                         Moving beyond carbon neutral on paper. Meridian Energy integrates utility-scale solar, wind, and storage into a unified platform, delivering physical 24/7 Carbon-Free Energy to accommodate India's 500 GW ambition and meet rigorous corporate Net Zero targets.
                       </p>
-                      <Link href="/insights/cfe" className="inline-flex items-center text-sm font-semibold text-[#1A2B45] hover:text-[#00A88F] transition group/link">
+                      {/* NOW WIRED TO /insights */}
+                      <Link href="/insights" className="inline-flex items-center text-sm font-semibold text-[#1A2B45] hover:text-[#00A88F] transition group/link">
                         <span className="mr-3 text-lg font-light transition-transform group-hover/link:translate-x-1">&rarr;</span> Explore our insights
                       </Link>
                     </div>
 
-                    {/* Column 2: Operational Capabilities (NOW FULLY WIRED) */}
+                    {/* Column 2: Operational Capabilities */}
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Operational Frameworks</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
@@ -70,7 +69,7 @@ export default function Navbar() {
                       </ul>
                     </div>
 
-                    {/* Column 3: Strategic Themes (FULLY WIRED) */}
+                    {/* Column 3: Strategic Themes */}
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Strategic Focus</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
@@ -129,7 +128,8 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full max-h-screen overflow-y-auto">
           <div className="px-8 pt-4 pb-8 space-y-4 flex flex-col">
-            <Link href="/insights/cfe" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-[#00A88F] py-2">
+            {/* NOW WIRED TO /insights */}
+            <Link href="/insights" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-[#00A88F] py-2">
               Insights
             </Link>
             <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-[#1A2B45] py-2">

@@ -8,21 +8,21 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-300 shadow-sm">
-      <div className="w-full px-8 md:px-24">
-        <div className="flex justify-between items-center h-24">
+      <div className="w-full px-8 md:px-24 h-24">
+        <div className="flex justify-between items-center h-full">
           
           {/* Left Side: Brand Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0 flex items-center h-full">
             <Link href="/" className="block group">
               <div className="flex items-center">
                 {/* Custom Brand Gradient */}
                 <span className="font-meridian text-3xl md:text-4xl tracking-tight bg-gradient-to-r from-[#8CD600] via-[#00A88F] to-[#005F88] bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
                   meridian
                 </span>
-                {/* Navy Blue Divider (Slightly faded so it doesn't overpower the text) */}
-                <span className="font-meridian text-2xl md:text-2xl text-[#1A2B45]/40 mx-2 md:mx-3 pb-1">|</span>
-                {/* Solid Navy Blue 'Renewables' */}
-                <span className="font-meridian text-2xl md:text-2xl text-[#1A2B45] tracking-wide group-hover:opacity-80 transition-opacity">
+                {/* Navy Blue Divider */}
+                <span className="text-2xl md:text-3xl font-light text-[#1A2B45]/40 mx-2 md:mx-3 pb-1">|</span>
+                {/* Solid Navy Blue 'Energy' */}
+                <span className="text-2xl md:text-3xl font-medium text-[#1A2B45] tracking-wide group-hover:opacity-80 transition-opacity">
                   Energy
                 </span>
               </div>
@@ -30,19 +30,74 @@ export default function Navbar() {
           </div>
 
           {/* Right Side: Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-10">
-            <Link href="/about" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition">
+          <div className="hidden md:flex items-center h-full space-x-10">
+            
+            {/* Institutional "Insights" Mega Menu */}
+            <div className="group h-full flex items-center">
+              <button className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center gap-1 h-full cursor-pointer border-b-2 border-transparent group-hover:border-[#1A2B45]">
+                Insights
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </button>
+
+              {/* The Dropdown Panel */}
+              <div className="absolute top-24 left-0 w-full bg-white border-t border-slate-200 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
+                <div className="max-w-[1400px] mx-auto px-8 md:px-24 py-16">
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
+
+                    {/* Column 1: Meridian Platform Description */}
+                    <div className="col-span-1 md:col-span-4 md:pr-8">
+                      <h3 className="text-2xl font-light text-slate-900 mb-6">The Intelligent Energy Platform</h3>
+                      <p className="text-sm text-slate-600 leading-relaxed mb-8">
+                        Moving beyond carbon neutral on paper. Meridian Energy integrates utility-scale solar, wind, and storage into a unified platform, delivering physical 24/7 Carbon-Free Energy to accommodate India's 500 GW ambition and meet rigorous corporate Net Zero targets.
+                      </p>
+                      <Link href="#" className="inline-flex items-center text-sm font-semibold text-[#1A2B45] hover:text-[#00A88F] transition group/link">
+                        <span className="mr-3 text-lg font-light transition-transform group-hover/link:translate-x-1">&rarr;</span> Explore our insights
+                      </Link>
+                    </div>
+
+                    {/* Column 2: Operational Capabilities (The Pipeline) */}
+                    <div className="col-span-1 md:col-span-4">
+                      <h4 className="text-sm text-slate-500 mb-6">Operational Frameworks</h4>
+                      <ul className="space-y-4 border-l border-slate-100 pl-4">
+                        <li><Link href="#" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium">Firm Dispatchable RE (FDRE)</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Utility-Scale Solar Energy</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Wind Power Infrastructure</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Battery Energy Storage (BESS)</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium mt-2 block">Revenue Structuring</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Captive & Group Captive PPAs</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Open Access (OA) Markets</Link></li>
+                      </ul>
+                    </div>
+
+                    {/* Column 3: Strategic Themes (The UN Compact) */}
+                    <div className="col-span-1 md:col-span-4">
+                      <h4 className="text-sm text-slate-500 mb-6">Strategic Focus</h4>
+                      <ul className="space-y-4 border-l border-slate-100 pl-4">
+                        <li><Link href="#" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-bold">24/7 Carbon-Free Energy</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">UN CFE Compact Alignment</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Time-Matched Procurement</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">Beyond Carbon Neutrality</Link></li>
+                        <li><Link href="#" className="text-sm text-slate-600 hover:text-[#00A88F] transition">India's 500 GW 2030 Target</Link></li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Link href="/about" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center h-full">
               Strategic Capital
             </Link>
-            <Link href="/portfolio" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition">
+            <Link href="/portfolio" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center h-full">
               Our Portfolio
             </Link>
-            <Link href="/contact" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition">
+            <Link href="/contact" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center h-full">
               Contact Us
             </Link>
             
             {/* Institutional 'Portal' Link */}
-            <div className="pl-6 border-l border-slate-300">
+            <div className="pl-6 border-l border-slate-300 h-full flex items-center">
               <Link href="/portal" className="text-xs font-bold text-[#1A2B45] uppercase tracking-widest hover:text-slate-500 transition flex items-center gap-2">
                 Investor Portal 
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -71,8 +126,11 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full">
+        <div className="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full max-h-screen overflow-y-auto">
           <div className="px-8 pt-4 pb-8 space-y-4 flex flex-col">
+            <Link href="#" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-[#00A88F] py-2">
+              Insights
+            </Link>
             <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-[#1A2B45] py-2">
               Strategic Capital
             </Link>

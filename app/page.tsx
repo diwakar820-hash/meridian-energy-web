@@ -160,7 +160,7 @@ export default function Home() {
 
               <div>
                 <p className="text-sm font-semibold text-[#1A2B45] mb-4">Target Mandate</p>
-                <p className="text-5xl md:text-6xl font-light text-[#1A2B45]">2030</p>
+                <p className="text-5xl md:text-6xl font-light text-[#1A2B45]">2035</p>
               </div>
 
             </div>
@@ -209,26 +209,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. OFFSET IMAGE CARD */}
+      {/* 4. MERIDIAN STRATEGY OVERLAP CARD */}
       <section className="w-full bg-[#1A2B45] py-32">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 xl:px-24">
-          <div className="relative">
-            <div className="w-full lg:w-3/4 h-[400px] md:h-[500px] bg-slate-800 relative overflow-hidden group">
-               <div className="absolute inset-0 bg-gradient-to-tr from-[#005F88] to-[#1A2B45] opacity-60 group-hover:scale-105 transition duration-700"></div>
+          <div className="relative flex flex-col lg:flex-row items-center justify-end">
+            
+            {/* Background Image Placeholder - Flipped to the Right */}
+            <div className="w-full lg:w-3/4 h-[400px] md:h-[500px] bg-slate-800 relative overflow-hidden group lg:absolute lg:right-0">
+               <div className="absolute inset-0 bg-gradient-to-tl from-[#00A88F]/40 to-[#1A2B45] opacity-80 group-hover:scale-105 transition duration-700"></div>
+               {/* Later, put an image of the Pune skyline or a massive solar grid here */}
                <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
             </div>
 
-            <div className="relative lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-0 w-full lg:w-1/2 bg-white p-10 md:p-16 shadow-2xl mt-[-50px] lg:mt-0 z-20">
+            {/* Overlapping Text Box - Flipped to the Left */}
+            <div className="relative w-full lg:w-1/2 bg-white p-10 md:p-16 shadow-2xl mt-[-50px] lg:mt-0 z-20 lg:mr-auto">
+              <p className="text-[#00A88F] font-bold tracking-widest uppercase text-xs mb-4">Investment Thesis</p>
               <h3 className="text-2xl md:text-4xl font-light text-[#1A2B45] mb-6 leading-tight">
-                All eyes turn to 'the India decade'
+                Capitalizing on India's 500 GW Mandate
               </h3>
               <p className="text-slate-600 leading-relaxed mb-8">
-                Following a decade of macro-economic reform and rising industrial demand, tier-one manufacturers are seeking massive, borderless, multi-state Open Access decarbonization solutions. We are structuring the capital to deliver it.
+                India is no longer just an emerging market; it is the epicenter of global infrastructure growth. Driven by robust policy frameworks, rapid industrialization, and an aggressive national mandate to reach 500 GW of non-fossil capacity by 2030, the subcontinent presents a generational opportunity for institutional capital.
               </p>
-              <Link href="/insights/fdre" className="inline-flex items-center text-white bg-[#1A2B45] hover:bg-[#005F88] px-8 py-4 text-sm font-medium transition duration-300">
-                Read the roadmap
+              <Link href="/insights/india-500gw" className="inline-flex items-center text-white bg-[#1A2B45] hover:bg-[#00A88F] px-8 py-4 text-sm font-medium transition duration-300">
+                Read our macro thesis
               </Link>
             </div>
+            
           </div>
         </div>
       </section>

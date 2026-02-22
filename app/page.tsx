@@ -214,11 +214,13 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 xl:px-24">
           <div className="relative flex flex-col lg:flex-row items-center justify-end">
             
-            {/* Background Image Placeholder - Flipped to the Right */}
-            <div className="w-full lg:w-3/4 h-[400px] md:h-[500px] bg-slate-800 relative overflow-hidden group lg:absolute lg:right-0">
-               <div className="absolute inset-0 bg-gradient-to-tl from-[#00A88F]/40 to-[#1A2B45] opacity-80 group-hover:scale-105 transition duration-700"></div>
-               {/* Later, put an image of the Pune skyline or a massive solar grid here */}
-               <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+            {/* Background Image - Flipped to the Right */}
+            <div 
+              className="w-full lg:w-3/4 h-[400px] md:h-[500px] bg-slate-800 relative overflow-hidden group lg:absolute lg:right-0 bg-cover bg-center transition-transform duration-700"
+              style={{ backgroundImage: "url('/india-macro.jpg')" }}
+            >
+               {/* Corporate gradient overlay to blend it perfectly with the dark blue section */}
+               <div className="absolute inset-0 bg-gradient-to-tl from-[#00A88F]/30 to-[#1A2B45]/90 opacity-90 group-hover:opacity-70 transition-opacity duration-700"></div>
             </div>
 
             {/* Overlapping Text Box - Flipped to the Left */}

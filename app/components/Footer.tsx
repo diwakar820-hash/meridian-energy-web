@@ -60,9 +60,12 @@ export default function Footer() {
           <div className="md:col-span-4 lg:col-span-2">
             <h4 className="font-medium mb-6 text-sm text-white">Capabilities</h4>
             <ul className="space-y-4 text-sm text-slate-400">
-              <li><Link href="/portfolio" className="hover:text-white transition">Hybrid Assets</Link></li>
-              <li><Link href="/portfolio" className="hover:text-white transition">Utility-Scale Solar</Link></li>
-              <li><Link href="/portfolio" className="hover:text-white transition">Wind Infrastructure</Link></li>
+              {/* Pointing to the FDRE whitepaper */}
+              <li><Link href="/insights/fdre" className="hover:text-white transition">Hybrid Assets (FDRE)</Link></li>
+              {/* Pointing to the Solar whitepaper */}
+              <li><Link href="/insights/solar" className="hover:text-white transition">Utility-Scale Solar</Link></li>
+              {/* Pointing to the Wind whitepaper */}
+              <li><Link href="/insights/wind" className="hover:text-white transition">Wind Infrastructure</Link></li>
             </ul>
           </div>
 

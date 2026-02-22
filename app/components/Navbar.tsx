@@ -8,30 +8,29 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-300 shadow-sm">
-      <div className="w-full px-8 md:px-24 h-24">
+      <div className="w-full px-6 md:px-12 xl:px-24 h-24">
         <div className="flex justify-between items-center h-full">
           
           {/* Left Side: Brand Logo */}
           <div className="flex-shrink-0 flex items-center h-full">
             <Link href="/" className="block group">
               <div className="flex items-center">
-                <span className="font-meridian text-3xl md:text-4xl tracking-tight bg-gradient-to-r from-[#8CD600] via-[#00A88F] to-[#005F88] bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
+                <span className="font-meridian text-3xl xl:text-4xl tracking-tight bg-gradient-to-r from-[#8CD600] via-[#00A88F] to-[#005F88] bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
                   meridian
                 </span>
-                <span className="text-2xl md:text-3xl font-light text-[#1A2B45]/40 mx-2 md:mx-3 pb-1">|</span>
-                <span className="text-2xl md:text-3xl font-medium text-[#1A2B45] tracking-wide group-hover:opacity-80 transition-opacity">
+                <span className="text-2xl xl:text-3xl font-light text-[#1A2B45]/40 mx-2 md:mx-3 pb-1">|</span>
+                <span className="text-2xl xl:text-3xl font-medium text-[#1A2B45] tracking-wide group-hover:opacity-80 transition-opacity">
                   Energy
                 </span>
               </div>
             </Link>
           </div>
 
-          {/* Right Side: Desktop Menu */}
-          <div className="hidden md:flex items-center h-full space-x-10">
+          {/* Right Side: Desktop Menu (Now uses xl: breakpoint to prevent tablet overlap) */}
+          <div className="hidden xl:flex items-center h-full space-x-10">
             
             {/* Institutional "Insights" Mega Menu */}
             <div className="group h-full flex items-center">
-              {/* NOW WIRED TO /insights */}
               <Link href="/insights" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center gap-1 h-full cursor-pointer border-b-2 border-transparent group-hover:border-[#1A2B45]">
                 Insights
                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -39,7 +38,7 @@ export default function Navbar() {
 
               {/* The Dropdown Panel */}
               <div className="absolute top-24 left-0 w-full bg-white border-t border-slate-200 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
-                <div className="max-w-[1400px] mx-auto px-8 md:px-24 py-16">
+                <div className="max-w-[1400px] mx-auto px-8 xl:px-24 py-16">
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
 
                     {/* Column 1: Meridian Platform Description */}
@@ -48,7 +47,6 @@ export default function Navbar() {
                       <p className="text-sm text-slate-600 leading-relaxed mb-8">
                         Moving beyond carbon neutral on paper. Meridian Energy integrates utility-scale solar, wind, and storage into a unified platform, delivering physical 24/7 Carbon-Free Energy to accommodate India's 500 GW ambition and meet rigorous corporate Net Zero targets.
                       </p>
-                      {/* NOW WIRED TO /insights */}
                       <Link href="/insights" className="inline-flex items-center text-sm font-semibold text-[#1A2B45] hover:text-[#00A88F] transition group/link">
                         <span className="mr-3 text-lg font-light transition-transform group-hover/link:translate-x-1">&rarr;</span> Explore our insights
                       </Link>
@@ -105,8 +103,8 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile Menu Toggle Button (Now visible on tablets up to xl breakpoint) */}
+          <div className="xl:hidden flex items-center">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-slate-900 hover:text-[#1A2B45] focus:outline-none"
@@ -124,11 +122,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Dropdown Menu (Now active on tablets up to xl breakpoint) */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full max-h-screen overflow-y-auto">
-          <div className="px-8 pt-4 pb-8 space-y-4 flex flex-col">
-            {/* NOW WIRED TO /insights */}
+        <div className="xl:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full max-h-[80vh] overflow-y-auto">
+          <div className="px-6 md:px-12 pt-4 pb-8 space-y-4 flex flex-col">
             <Link href="/insights" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-semibold text-slate-900 hover:text-[#00A88F] py-2">
               Insights
             </Link>

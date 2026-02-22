@@ -29,6 +29,21 @@ export default function AboutPage() {
           <div className="lg:col-span-5">
             <h2 className="text-3xl font-light text-slate-900 mb-6">The Meridian Mandate</h2>
             <div className="w-12 h-1 bg-[#00A88F] mb-8"></div>
+            
+            {/* Added Corporate Structure Block */}
+            <div className="mb-8 p-6 bg-white border border-slate-200 shadow-sm border-l-4 border-l-[#1A2B45]">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Headquarters</p>
+                  <p className="text-sm font-medium text-[#1A2B45]">Pune, Maharashtra</p>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Parent Entity</p>
+                  <p className="text-sm font-medium text-[#1A2B45]">Meridian Enterprises Pvt. Ltd.</p>
+                </div>
+              </div>
+            </div>
+
             <p className="text-slate-600 leading-relaxed mb-6">
               The transition to a zero-carbon economy is no longer a technological challenge; it is a capital deployment challenge. 
             </p>
@@ -87,8 +102,9 @@ export default function AboutPage() {
             <div className="md:col-span-4 lg:col-span-3">
               {/* Headshot Placeholder */}
               <div className="w-full aspect-square bg-slate-800 border-4 border-[#005F88] relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A2B45] to-transparent opacity-60"></div>
-                {/* You can add an <img src="..." /> here later */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A2B45] to-transparent opacity-60 z-10"></div>
+                {/* Note: Place 'founder.jpg' in the public folder */}
+                <div className="absolute inset-0 bg-cover bg-center grayscale opacity-80" style={{ backgroundImage: "url('/founder.jpg')" }}></div>
               </div>
             </div>
             

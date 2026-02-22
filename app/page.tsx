@@ -1,86 +1,178 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  // The Data for your 3 Slides
+  const slides = [
+    {
+      id: 0,
+      tag: "Investors",
+      headline: "2026 Operational Briefing",
+      subhead: "Institutionalizing the energy transition through strategic renewable assets.",
+      video: "/hero-bg.mp4",
+      buttonText: "Visit our investor centre",
+      buttonLink: "/portal"
+    },
+    {
+      id: 1,
+      tag: "Insights",
+      headline: "Critical infrastructure's new frontier",
+      subhead: "Deploying the 50 MW Chakan & Talegaon Firm Dispatchable Renewable Energy pilot.",
+      video: "/wind-bg.mp4", // This will use your newly generated wind video!
+      buttonText: "Read the insight",
+      buttonLink: "/insights/fdre"
+    },
+    {
+      id: 2,
+      tag: "Corporate",
+      headline: "Structuring 24/7 Carbon-Free Energy",
+      subhead: "Engineering absolute physical grid decarbonization for tier-one commercial off-takers.",
+      video: "/grid-bg.mp4", // This will use your newly generated transmission video!
+      buttonText: "Strategic Capital",
+      buttonLink: "/about"
+    }
+  ];
+
+  // Auto-rotate slides every 8 seconds (if playing)
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (isPlaying) {
+      timer = setInterval(() => {
+        setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      }, 8000);
+    }
+    return () => clearInterval(timer);
+  }, [isPlaying, slides.length]);
+
   return (
     <main className="min-h-screen bg-white text-slate-900 font-sans">
       
-      {/* 1. MACQUARIE-STYLE HERO SLIDER */}
-      <section className="relative w-full min-h-screen flex items-end pb-24 sm:pb-32 bg-[#1A2B45] text-white overflow-hidden pt-24">
+      {/* 1. THE MACQUARIE HERO SLIDER */}
+      <section className="relative w-full min-h-screen flex items-center bg-[#1A2B45] text-white overflow-hidden pt-24">
         
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="absolute inset-0 w-full h-full object-cover object-top z-0 opacity-60"
-        >
-          <source src="/hero.mp4" type="video/mp4" />
-        </video>
+        {/* Render Videos */}
+        {slides.map((slide, index) => (
+          <video 
+            key={slide.id}
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className={`absolute inset-0 w-full h-full object-cover object-top z-0 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? 'opacity-70' : 'opacity-0'}`}
+          >
+            <source src={slide.video} type="video/mp4" />
+          </video>
+        ))}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A2B45] via-[#1A2B45]/40 to-transparent z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B45]/80 to-transparent z-10"></div>
+        {/* Deep Gradients for Text Readability */}
+        <div className="absolute inset-0 bg-[#1A2B45]/30 z-10 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B45]/80 via-[#1A2B45]/40 to-transparent z-10 pointer-events-none"></div>
 
-        <div className="relative z-20 max-w-[1400px] w-full mx-auto px-6 sm:px-8 md:px-12 lg:px-24 flex flex-col justify-end h-full">
-          
-          {/* RESPONSIVE FIX: Changed bottom margin (mb-24 lg:mb-12) to push buttons up on tablets */}
-          <div className="max-w-3xl mb-24 lg:mb-12">
-            <p className="text-white/70 font-bold tracking-widest uppercase text-xs mb-4">
-              2026 Operational Briefing
+        {/* Vertically Centered Text Content */}
+        <div className="relative z-20 max-w-[1400px] w-full mx-auto px-6 sm:px-8 md:px-12 xl:px-24">
+          <div className="max-w-3xl">
+            <p className="text-white font-medium text-sm mb-4 transition-all duration-500">
+              {slides[currentSlide].tag}
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light leading-[1.1] mb-8 font-meridian">
-              Institutionalizing the energy transition through strategic renewable assets.
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-light leading-[1.1] mb-6 font-meridian transition-all duration-500">
+              {slides[currentSlide].headline}
             </h1>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/insights" className="bg-[#00A88F] hover:bg-white hover:text-[#1A2B45] text-white px-8 py-4 text-sm font-medium transition duration-300">
-                Read the insight
-              </Link>
-              <Link href="/portal" className="bg-transparent border border-white hover:bg-white/10 text-white px-8 py-4 text-sm font-medium transition duration-300">
-                Visit our investor centre
-              </Link>
-            </div>
+            <p className="text-lg md:text-xl text-white/80 font-light max-w-2xl mb-10 transition-all duration-500">
+              {slides[currentSlide].subhead}
+            </p>
+            <Link href={slides[currentSlide].buttonLink} className="inline-block bg-transparent border border-white hover:bg-white hover:text-[#1A2B45] text-white px-8 py-4 text-sm font-medium transition duration-300">
+              {slides[currentSlide].buttonText}
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom Center Controls (Macquarie Style) */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex items-center space-x-6">
+          
+          {/* Slide Indicators (Thin Lines) */}
+          <div className="flex space-x-3">
+            {slides.map((_, index) => (
+              <button 
+                key={index}
+                onClick={() => {
+                  setCurrentSlide(index);
+                  setIsPlaying(false); // Pause if user manually clicks
+                }}
+                className={`h-[2px] transition-all duration-300 ${currentSlide === index ? 'w-12 bg-white' : 'w-8 bg-white/40 hover:bg-white/70'}`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
 
-          <div className="absolute bottom-8 left-6 sm:left-8 md:left-12 lg:left-24 flex items-center space-x-6 text-xs font-bold tracking-widest uppercase text-white/50">
-            <button className="hover:text-white transition">Previous</button>
-            <button className="text-white">Next</button>
-            <span className="w-px h-4 bg-white/30"></span>
-            <span className="text-white">01 / 03</span>
-            <span className="hidden md:inline ml-4 text-white/70 truncate max-w-xs">Critical infrastructure's new frontier</span>
-          </div>
+          {/* Play/Pause Button */}
+          <button 
+            onClick={() => setIsPlaying(!isPlaying)}
+            className="text-white hover:text-slate-300 transition"
+            aria-label={isPlaying ? "Pause slider" : "Play slider"}
+          >
+            {isPlaying ? (
+              // Pause Icon
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            ) : (
+              // Play Icon
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            )}
+          </button>
         </div>
       </section>
 
-      {/* 2. HIGH-CONTRAST MACRO STATS BAR */}
-      <section className="w-full bg-slate-50 border-b border-slate-200 py-16">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-24">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
-            <div className="md:w-1/3">
-              <h2 className="text-2xl md:text-3xl font-light text-[#1A2B45] leading-snug">
-                We engineer physical decarbonization frameworks for tier-one off-takers.
+      {/* 2. THE BROOKFIELD STATS BLOCK */}
+      <section className="w-full bg-white py-24 md:py-32">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 xl:px-24">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+            
+            {/* Left Side: The "Roots" Statement */}
+            <div className="lg:col-span-6 space-y-6">
+              <p className="font-bold text-sm text-[#1A2B45] tracking-wide">Our Mandate</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#1A2B45] leading-[1.2]">
+                Grounded in operational heritage, we engineer absolute physical grid decarbonization.
               </h2>
             </div>
-            
-            <div className="md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-              <div className="border-l-2 border-[#00A88F] pl-6">
-                <p className="text-4xl md:text-5xl font-light text-[#1A2B45] mb-2">50 <span className="text-xl">MW</span></p>
-                <p className="text-sm text-slate-500 font-medium">Foundational FDRE Pilot</p>
+
+            {/* Right Side: The Macro Stats Grid */}
+            <div className="lg:col-span-6 grid grid-cols-2 gap-x-8 gap-y-16">
+              
+              <div>
+                <p className="text-sm font-semibold text-[#1A2B45] mb-4">Foundational Asset</p>
+                <p className="text-5xl md:text-6xl font-light text-[#1A2B45]">50<span className="text-2xl font-medium ml-1">MW</span></p>
               </div>
-              <div className="border-l-2 border-[#00A88F] pl-6">
-                <p className="text-4xl md:text-5xl font-light text-[#1A2B45] mb-2">10 <span className="text-xl">GW</span></p>
-                <p className="text-sm text-slate-500 font-medium">National Pipeline Vision</p>
+              
+              <div>
+                <p className="text-sm font-semibold text-[#1A2B45] mb-4">National Pipeline</p>
+                <p className="text-5xl md:text-6xl font-light text-[#1A2B45]">10<span className="text-2xl font-medium ml-1">GW</span></p>
               </div>
-              <div className="border-l-2 border-[#00A88F] pl-6 col-span-2 md:col-span-1">
-                <p className="text-4xl md:text-5xl font-light text-[#1A2B45] mb-2">24/7</p>
-                <p className="text-sm text-slate-500 font-medium">Carbon-Free Energy</p>
+              
+              <div>
+                <p className="text-sm font-semibold text-[#1A2B45] mb-4">Delivery Profile</p>
+                <p className="text-5xl md:text-6xl font-light text-[#1A2B45]">24/7</p>
               </div>
+
+              <div>
+                <p className="text-sm font-semibold text-[#1A2B45] mb-4">Target Mandate</p>
+                <p className="text-5xl md:text-6xl font-light text-[#1A2B45]">2030</p>
+              </div>
+
             </div>
+
           </div>
+
         </div>
       </section>
 
       {/* 3. CAPABILITIES / TRACK RECORD */}
-      <section className="w-full bg-white py-24">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-24">
+      <section className="w-full bg-slate-50 border-t border-slate-100 py-24">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             
             <div className="space-y-8">
@@ -96,17 +188,17 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="bg-slate-50 p-8 md:p-12 space-y-8 border border-slate-100 shadow-sm">
+            <div className="bg-white p-8 md:p-12 space-y-8 border border-slate-200 shadow-sm">
               <div>
                 <h4 className="text-[#1A2B45] font-semibold text-lg mb-2">Executing the 500 GW Mandate</h4>
                 <p className="text-slate-600 text-sm leading-relaxed">Meridian Energy is currently mapping contiguous land parcels and high-voltage evacuation nodes across India's highest-yield corridors.</p>
               </div>
-              <div className="w-full h-px bg-slate-200"></div>
+              <div className="w-full h-px bg-slate-100"></div>
               <div>
                 <h4 className="text-[#1A2B45] font-semibold text-lg mb-2">Pune Foundational Asset</h4>
                 <p className="text-slate-600 text-sm leading-relaxed">Anchoring our growth with a 50 MW hybrid (Solar + Wind + BESS) operational blueprint in Maharashtra.</p>
               </div>
-              <div className="w-full h-px bg-slate-200"></div>
+              <div className="w-full h-px bg-slate-100"></div>
               <div>
                 <h4 className="text-[#1A2B45] font-semibold text-lg mb-2">Multi-Tiered Revenue Structuring</h4>
                 <p className="text-slate-600 text-sm leading-relaxed">Securing core growth capital through Group Captive consortiums and third-party Open Access agreements.</p>
@@ -118,11 +210,11 @@ export default function Home() {
       </section>
 
       {/* 4. OFFSET IMAGE CARD */}
-      <section className="w-full bg-[#f8f9fa] py-24">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 lg:px-24">
+      <section className="w-full bg-[#1A2B45] py-32">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-12 xl:px-24">
           <div className="relative">
             <div className="w-full lg:w-3/4 h-[400px] md:h-[500px] bg-slate-800 relative overflow-hidden group">
-               <div className="absolute inset-0 bg-gradient-to-tr from-[#005F88] to-[#1A2B45] opacity-80 group-hover:scale-105 transition duration-700"></div>
+               <div className="absolute inset-0 bg-gradient-to-tr from-[#005F88] to-[#1A2B45] opacity-60 group-hover:scale-105 transition duration-700"></div>
                <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
             </div>
 
@@ -133,24 +225,10 @@ export default function Home() {
               <p className="text-slate-600 leading-relaxed mb-8">
                 Following a decade of macro-economic reform and rising industrial demand, tier-one manufacturers are seeking massive, borderless, multi-state Open Access decarbonization solutions. We are structuring the capital to deliver it.
               </p>
-              <Link href="/insights/fdre" className="inline-flex items-center text-white bg-[#1A2B45] hover:bg-[#00A88F] px-8 py-4 text-sm font-medium transition duration-300">
+              <Link href="/insights/fdre" className="inline-flex items-center text-white bg-[#1A2B45] hover:bg-[#005F88] px-8 py-4 text-sm font-medium transition duration-300">
                 Read the roadmap
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. EXECUTIVE LEADERSHIP QUOTE */}
-      <section className="w-full bg-white py-24 md:py-32 border-t border-slate-100">
-        <div className="max-w-[1000px] mx-auto px-6 sm:px-8 md:px-12 text-center">
-          <svg className="w-12 h-12 text-[#00A88F]/20 mx-auto mb-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1A2B45] leading-relaxed mb-12">
-            "We empower industrial partners to bypass annualized carbon accounting and achieve absolute, physical grid decarbonization through Firm Dispatchable Renewable architectures."
-          </h2>
-          <div>
-            <p className="font-semibold text-[#1A2B45] text-lg">Diwakar Parvathaneni</p>
-            <p className="text-sm text-slate-500 mt-1 uppercase tracking-widest font-bold">Founder & Chief Executive Officer</p>
           </div>
         </div>
       </section>

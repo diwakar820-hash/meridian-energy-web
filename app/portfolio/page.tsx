@@ -62,7 +62,7 @@ export default function PortfolioPage() {
               </div>
               <div>
                 <p className="text-xs font-bold tracking-widest uppercase text-slate-400 mb-1">Footprint</p>
-                <p className="text-xl font-medium text-slate-900">200+ Acres (Leased)</p>
+                <p className="text-xl font-medium text-slate-900">200+ Acres </p>
               </div>
               <div>
                 <p className="text-xs font-bold tracking-widest uppercase text-slate-400 mb-1">Grid Integration</p>

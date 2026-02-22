@@ -24,7 +24,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* FOUNDATIONAL ASSET: 50 MW PUNE PILOT */}
-      <section className="max-w-[1200px] mx-auto px-8 py-24">
+      <section className="max-w-[1200px] mx-auto px-8 py-24 bg-white">
         <div className="mb-16">
           <h2 className="text-3xl font-light text-slate-900 mb-6">The Foundational Asset</h2>
           <div className="w-12 h-1 bg-[#00A88F]"></div>
@@ -35,8 +35,9 @@ export default function PortfolioPage() {
             {/* Project Image / Blueprint Placeholder */}
             <div className="w-full aspect-[4/3] bg-slate-100 border border-slate-200 p-2 shadow-lg relative group overflow-hidden">
                <div className="absolute inset-0 bg-[#1A2B45]/5 group-hover:bg-transparent transition duration-500 z-10"></div>
-               <div className="w-full h-full bg-slate-200 flex items-center justify-center relative z-0">
-                 <p className="text-slate-400 font-medium tracking-widest uppercase text-sm"></p>
+               {/* Note: Place 'talegaon-asset.jpg' in public folder */}
+               <div className="w-full h-full bg-cover bg-center relative z-0" style={{ backgroundImage: "url('/talegaon-asset.jpg')" }}>
+                 {!true && <p className="text-slate-400 font-medium tracking-widest uppercase text-sm flex items-center justify-center h-full">Asset Image</p>}
                </div>
             </div>
           </div>
@@ -60,8 +61,8 @@ export default function PortfolioPage() {
                 <p className="text-xl font-medium text-slate-900">Solar + Wind + BESS</p>
               </div>
               <div>
-                <p className="text-xs font-bold tracking-widest uppercase text-slate-400 mb-1">Off-Take Model</p>
-                <p className="text-xl font-medium text-slate-900">Group Captive / OA</p>
+                <p className="text-xs font-bold tracking-widest uppercase text-slate-400 mb-1">Footprint</p>
+                <p className="text-xl font-medium text-slate-900">200+ Acres (Leased)</p>
               </div>
               <div>
                 <p className="text-xs font-bold tracking-widest uppercase text-slate-400 mb-1">Grid Integration</p>

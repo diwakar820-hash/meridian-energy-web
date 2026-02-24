@@ -27,7 +27,6 @@ export default function Navbar() {
           </div>
 
           {/* 2. RIGHT SIDE: DESKTOP MENU (ALL 8 KEYS COMBINED) */}
-          {/* Reduced space-x to 6 so all 8 items fit perfectly on a single line */}
           <div className="hidden xl:flex items-center h-full space-x-6">
             
             {/* =========================================
@@ -57,17 +56,17 @@ export default function Navbar() {
                       <h4 className="text-sm text-slate-500 mb-6">Company</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
                         <li><Link href="/about" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium">Who We Are</Link></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Global Presence & Operations</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Executive Leadership</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Sustainability Framework</span></li>
+                        <li><Link href="/contact" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Global Presence & Operations</Link></li>
+                        <li><Link href="/about" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Executive Leadership</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Sustainability Framework</Link></li>
                       </ul>
                     </div>
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Capabilities</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><span className="text-sm text-slate-900 font-bold">Renewable Power & Transition</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Asset Management</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Firm Dispatchable Infrastructure</span></li>
+                        <li><Link href="/portfolio" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-bold block">Renewable Power & Transition</Link></li>
+                        <li><Link href="/portfolio" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Asset Management</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Firm Dispatchable Infrastructure</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -97,17 +96,17 @@ export default function Navbar() {
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Who We Serve</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><Link href="/portfolio" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium">Institutional LPs</Link></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Commercial & Industrial Off-takers</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Strategic Development Partners</span></li>
+                        <li><Link href="/portfolio" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium block">Institutional LPs</Link></li>
+                        <li><Link href="/portfolio" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Commercial & Industrial Off-takers</Link></li>
+                        <li><Link href="/contact" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Strategic Development Partners</Link></li>
                       </ul>
                     </div>
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Investment Strategies</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><span className="text-sm text-slate-900 font-bold">Platform Equity</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Project Finance & Senior Debt</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Captive Yield Structuring</span></li>
+                        <li><Link href="/about" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-bold block">Platform Equity</Link></li>
+                        <li><Link href="/about" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Project Finance & Senior Debt</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Captive Yield Structuring</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -137,17 +136,17 @@ export default function Navbar() {
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Views</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><Link href="/insights/fdre" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium">Insights & Technical Papers</Link></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">The 500 GW Macro Thesis</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">FDRE Architecture</span></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium block">Insights & Technical Papers</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">The 500 GW Macro Thesis</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">FDRE Architecture</Link></li>
                       </ul>
                     </div>
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Newsroom</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><span className="text-sm text-slate-900 font-bold">Press Releases</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Corporate Announcements</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Media & Assets</span></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-bold block">Press Releases</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Corporate Announcements</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Media & Assets</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -177,17 +176,17 @@ export default function Navbar() {
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Join Us</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><Link href="/contact" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium">Life at Meridian</Link></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Career Opportunities</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Student & Analyst Programs</span></li>
+                        <li><Link href="/contact" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium block">Life at Meridian</Link></li>
+                        <li><Link href="/contact" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Career Opportunities</Link></li>
+                        <li><Link href="/contact" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Student & Analyst Programs</Link></li>
                       </ul>
                     </div>
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Focus Areas</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><span className="text-sm text-slate-900 font-bold">Engineering & Grid Tech</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Infrastructure Investment</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Corporate & Operations</span></li>
+                        <li><Link href="/contact" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-bold block">Engineering & Grid Tech</Link></li>
+                        <li><Link href="/contact" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Infrastructure Investment</Link></li>
+                        <li><Link href="/contact" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Corporate & Operations</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -195,12 +194,11 @@ export default function Navbar() {
               </div>
             </div>
 
-
             {/* =========================================
                 YOUR ORIGINAL KEYS (5-8)
             ========================================= */}
 
-            {/* --- 5. INSIGHTS (YOUR EXACT ORIGINAL MEGA MENU) --- */}
+            {/* --- 5. INSIGHTS --- */}
             <div className="group h-full flex items-center">
               <Link href="/insights/fdre" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center gap-1 h-full cursor-pointer border-b-2 border-transparent group-hover:border-[#1A2B45]">
                 Insights
@@ -224,25 +222,25 @@ export default function Navbar() {
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Operational Frameworks</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><Link href="/insights/fdre" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium">Firm Dispatchable RE (FDRE)</Link></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Utility-Scale Solar Energy</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Wind Power Infrastructure</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Battery Energy Storage (BESS)</span></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium block">Firm Dispatchable RE (FDRE)</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Utility-Scale Solar Energy</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Wind Power Infrastructure</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Battery Energy Storage (BESS)</Link></li>
                         
-                        <li><span className="text-sm text-slate-900 font-medium mt-2 block">Revenue Structuring</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Captive & Group Captive PPAs</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Open Access (OA) Markets</span></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-medium mt-2 block">Revenue Structuring</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Captive & Group Captive PPAs</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Open Access (OA) Markets</Link></li>
                       </ul>
                     </div>
 
                     <div className="col-span-1 md:col-span-4">
                       <h4 className="text-sm text-slate-500 mb-6">Strategic Focus</h4>
                       <ul className="space-y-4 border-l border-slate-100 pl-4">
-                        <li><span className="text-sm text-slate-900 font-bold">24/7 Carbon-Free Energy</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">UN CFE Compact Alignment</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Time-Matched Procurement</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">Beyond Carbon Neutrality</span></li>
-                        <li><span className="text-sm text-slate-600 cursor-default">India's 500 GW 2030 Target</span></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-900 hover:text-[#00A88F] transition font-bold block">24/7 Carbon-Free Energy</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">UN CFE Compact Alignment</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Time-Matched Procurement</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">Beyond Carbon Neutrality</Link></li>
+                        <li><Link href="/insights/fdre" className="text-sm text-slate-600 hover:text-[#00A88F] transition block">India's 500 GW 2030 Target</Link></li>
                       </ul>
                     </div>
 
@@ -251,17 +249,17 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* --- 6. STRATEGIC CAPITAL (YOUR EXACT ORIGINAL LINK) --- */}
+            {/* --- 6. STRATEGIC CAPITAL --- */}
             <Link href="/about" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center h-full">
               Strategic Capital
             </Link>
 
-            {/* --- 7. OUR PORTFOLIO (YOUR EXACT ORIGINAL LINK) --- */}
+            {/* --- 7. OUR PORTFOLIO --- */}
             <Link href="/portfolio" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center h-full">
               Our Portfolio
             </Link>
 
-            {/* --- 8. CONTACT US (YOUR EXACT ORIGINAL LINK) --- */}
+            {/* --- 8. CONTACT US --- */}
             <Link href="/contact" className="text-sm font-semibold text-slate-700 hover:text-[#1A2B45] tracking-wide transition flex items-center h-full">
               Contact Us
             </Link>
@@ -270,7 +268,7 @@ export default function Navbar() {
                 INVESTOR PORTAL (YOUR EXACT STYLING)
             ========================================= */}
             <div className="pl-6 border-l border-slate-300 h-full flex items-center bg-slate-50 px-6">
-              <Link href="/portal" className="text-xs font-bold text-[#1A2B45] uppercase tracking-widest hover:text-slate-500 transition flex items-center gap-2">
+              <Link href="/portal" className="text-xs font-bold text-[#1A2B45] uppercase tracking-widest hover:text-[#00A88F] transition flex items-center gap-2">
                 INVESTOR PORTAL 
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </Link>
